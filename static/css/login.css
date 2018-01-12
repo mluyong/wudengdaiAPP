@@ -1,0 +1,26 @@
+/*登录注册找回密码的背景图片*/
+body{width:100%;height: 100%;background-image:url(../img/backgrounds.jpg);background-size:100%;}
+/*登录注册找回密码几个字*/
+.login{width: 100%;text-align: center;font-size:18px;}
+/*input的外框*/
+.text_input_box{position: relative;}
+.text_input_box img{width:16.5px;position: absolute;top:10px;left:16px;}
+/*宽度为100%；缩进3em的input*/
+.text_input_one{width:100%;height: 40px;border: 1px solid #0A0A0A ;background: #ffffff;border-radius: 14px;outline: none;text-indent: 3em;}
+/*宽度为100%；缩进2em的input*/
+.text_input_two{width:100%;height: 40px;border: 1px solid #0A0A0A ;background: #ffffff;border-radius: 14px;outline: none;text-indent: 2em;}
+/*宽度为60%；缩进2em的input*/
+.text_input_three{width:60%;height: 40px;border: 1px solid #0A0A0A ;background: #ffffff;border-radius: 14px;outline: none;text-indent: 2em;}
+/*宽度为100%；提交*/
+.submit_input{width:100%;height: 40px;border: 1px solid rgba(194,194,194,1) ;background: rgba(223,157,42,1);border-radius: 14px;outline: none;text-align: center;color: white;}
+/*宽度为200px；提交*/
+.submit_input_200{width:200px;height: 40px;border: 1px solid rgba(194,194,194,1) ;background: rgba(223,157,42,1);border-radius: 14px;outline: none;text-align: center;color: white;}
+/*获取验证码*/
+.text_input_test{width:37%;height: 40px;border: 1px solid rgba(194,194,194,1) ;background: rgba(223,157,42,1);border-radius: 14px;outline: none;text-align: center;color: white;}
+/*获取验证码之后的提示*/
+.test-word{font-size:10px;}
+/*登录页面注册和找回密码的链接*/
+.login-e-l a{font-size:12px;color: rgba(51,51,51,1);}
+/*登录页面的qq和微信*/
+.imgbox{width:190px;height:49px;margin:0 auto;}
+.imgbox img{width:49px;}
