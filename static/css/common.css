@@ -1,4 +1,7 @@
 *{padding: 0;margin:0;font-size: 16px;font-family: "微软雅黑";}
+body{
+    background-color: #DBDBDB;
+}
 a{color: black;text-decoration: none;}
 .clear{clear: both;}
 .clearfix:after{
@@ -12,6 +15,7 @@ a{color: black;text-decoration: none;}
 .clearfix{
     zoom:1;
 }
+.background_white{    background:white;  }
 .float_left{float: left;}
 .float_right{float:right}
 .padding_67_75{padding: 33px 37px;}
@@ -27,12 +31,24 @@ a{color: black;text-decoration: none;}
 .line-block{
     display: inline-block;
 }
+.width100{
+    width: 100% !important;
+}
 .text-center{
     text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
 }
 .text-align-center{text-align: center;}
 .text-size{
     font-size: 0px !important;
+}
+.text-size15{
+    font-size: 15px;
 }
 .text-size14{
     font-size: 14px;
@@ -67,6 +83,9 @@ border-bottom: 1px solid #DBDBDB;
 .color{
     color: rgba(255,96,0,1);
 }
+.color51{
+    color: rgba(51,51,51,1);
+}
 .color-red{
     color: red;
 }
@@ -75,7 +94,6 @@ border-bottom: 1px solid #DBDBDB;
 }
 .btn1{
     width: 80px;
-    /* height: 28px;; */
     padding: 5px 10px;
     color: white;
     background-color: rgba(231,148,60,1);
@@ -97,27 +115,90 @@ border-bottom: 1px solid #DBDBDB;
     text-align: center;
     vertical-align: middle;
 }
-.nav{
-    width: 100%;
-    background-color: white;
+/* 底部 */
+.mint-tabbar{
     position: fixed;
-    bottom: 0px;
 }
-.nav ul{
-    font-size: 0;
-}
-.nav ul li{
+/* 头部 */
+
+.mint-header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+    height: 44px;
+    line-height: 1;
+    padding: 0 10px;
+    position: relative;
     text-align: center;
-    display: inline-block;
-    width: calc( 100% / 4 );
-    font-size: 0;
+    white-space: nowrap;
+    border-bottom: none;
+  }
+  /*咨询详情头部  */
+  .mint-header{
+    background-color: #FFFFFF;
 }
-.nav ul li img{
-    width: 28px;
-    margin: 6px 0 0 0;
+  .mint-header-title{
+    font-size: 18px;
+    line-height: 20px;
+  }
+ .header-right img{
+    width:100%;
+ }
+ .mint-header .mint-button {
+  width: 19.5px;
+  height: 19px;
+  font-weight: bold;
+  margin-right: 15px;
+ }
+
+  /* 我的订单 头部跳转 */
+.mint-navbar .mint-tab-item {
+    padding: 12px 0px;
+    margin: 0 10px;
+    font-size: 15px;
 }
-.nav ul li p{
-    font-size: 10px;
-    margin:0 0 5px 0;
-    color:  rgba(77,77,77,1);
+.mint-navbar .mint-tab-item a{
+    font-size: 15px;
 }
+.mint-navbar .mint-tab-item.is-selected{
+    border-bottom: 2px solid black;
+    color: black;
+}
+.mint-navbar .mint-tab-item.is-selected a{
+    color: black;
+}
+.mint-navbar .mint-tab-item{
+    border-bottom: 2px solid rgb(255, 255, 255) ;
+}
+.mint-navbar .mint-tab-item a{
+    color: rgba(102,102,102,1);
+}
+.height_47{
+    width:100%;   
+    height:47px;  
+}  
+.line_height_47{
+    line-height: 47px;  
+}  
+.bottom_pay{    
+    width:100%;    
+    height: 47px;    
+    background: rgba(249,249,249,1);    
+    position: fixed;    
+    bottom:0;    
+    left:0;  
+}  
+.online_img{   
+     width:25px;    
+     height:25px;    
+     margin-left:18px;   
+      margin-top:4px;  
+    } 
+.online_img img{    width:100%;  }  .online_word{    font-size:10px;    margin-left:10px;  }  .small_word{    font-size:10px;  }  .normal_word{    font-size: 14px;    color: red;  }  .pay_btn{    width:149px;    height:47px;    font-size:18px;    background:rgba(231,148,60,1);    color:white;    border:none;  }  /* 最下面支付公共样式 */
