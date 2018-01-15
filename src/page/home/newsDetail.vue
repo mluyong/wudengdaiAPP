@@ -3,7 +3,7 @@
       <div class="header width100">
           <div class="border-bottom">
             <mt-header title="咨询详情">
-              <router-link to="/" slot="left">
+              <router-link to="/news/report" slot="left">
                <mt-button icon="back"></mt-button>
                 </router-link>
               <mt-button slot="right" class="header-right">

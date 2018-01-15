@@ -1,7 +1,7 @@
 <template>
   <div class="position">
     <div class="search-car clearfix">
-      <div class="search-car-go"><img src="../../../static/img/go-back-left.png" alt=""></div>
+      <router-link to="/cartaber/car"><div class="search-car-go"><img src="../../../static/img/go-back-left.png" alt=""></div></router-link>
       <div class="search-car-input clearfix"><img src="../../../static/img/search.png" alt=""><input type="text" placeholder="搜索"></div>
       <div class="Reset">重置</div>
     </div>
@@ -27,7 +27,7 @@
         <option value="">8万-15万</option>
       </select>
       <div style="width:25%; float:right;" class="text-center">
-      <p @click="screenCar()"><span>筛选</span><i class="el-icon-caret-bottom"></i></p>
+      <p @click="screenCar()"><span class="text-size13">筛选</span><i class="el-icon-caret-bottom"></i></p>
       </div>
       <div v-if="screenIf" class="screen-down  clearfix">
         <div>
@@ -86,6 +86,7 @@
       </div>
     </div>
     <ul class="car-all clearfix">
+      <router-link to="/newcardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -94,6 +95,8 @@
           <p class="color-red">优惠价<span class="text-size18">7.92</span>万</p>
         </div>
       </li>
+      </router-link>
+      <router-link to="/newcardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -102,6 +105,7 @@
           <p class="color-red">优惠价<span class="text-size18">7.92</span>万</p>
         </div>
       </li>
+      </router-link>
     </ul>
     
       <div class="car-intent" v-if="carIntentIf">
@@ -155,6 +159,10 @@ export default {
   margin: 0px;
   padding: 0px;
 }
+option{
+  font-size: 13px;
+  border: none !important;
+}
 .car-intent{
   width: 80%;
   margin: 0 auto;
@@ -202,14 +210,14 @@ export default {
   display: inline-block;
   border: 0.5px solid rgba(153, 153, 153, 1);
   padding: 0 7px;
-  height: 18px;
+  height: 20px;
   background-color: white;
   margin: 5px 5px 5px 0;
 }
 .condition li p,
 .condition li p span {
   font-size: 10px;
-  line-height: 18px;
+  line-height: 17px;
   color: rgba(132, 132, 132, 1);
 }
 .condition li p span {

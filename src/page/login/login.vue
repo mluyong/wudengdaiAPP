@@ -78,14 +78,4 @@ export default {
 
 @import url('../../../static/css/login.css');
 
-.fixed{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  background:url('../../../static/img/backgrounds.jpg');
-  background-size: 100% 100%;
-  z-index: -99999999999999999999;
-}
 </style>

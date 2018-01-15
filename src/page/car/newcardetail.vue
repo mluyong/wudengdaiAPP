@@ -1,7 +1,7 @@
 <template>
   <div>
     <mt-header title="汽车详情">
-      <router-link to="/shop" slot="left">
+      <router-link to="/newcarsearch" slot="left">
       <mt-button icon="back"></mt-button>
       <div class="nav-img-box">
         <img class="nav-img" src="../../../static/img/shares2.png"/>

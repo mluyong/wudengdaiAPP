@@ -1,27 +1,86 @@
 <template>
-  
-  <div>
-    <mt-navbar v-model="selected">
-      <mt-tab-item id="1"><router-link to="/cartaber/car">选车</router-link></mt-tab-item>
-      <mt-tab-item id="2"><router-link to="/cartaber/usedcar">二手车</router-link></mt-tab-item>
-      <mt-tab-item id="3"><router-link to="/cartaber/finance">金融</router-link></mt-tab-item>
-      <router-link class="search" to="/search"><img src="../../static/img/search.png" alt=""></router-link>
-  </mt-navbar>
-  <router-view></router-view>
-  </div>
+  <div class="cartaber">
+      <ul> 
+        <li v-for="item in nav" @click="selectNav(item.title)" v-bind:key="item.title">
+         <p :class="isSelect === item.title ? 'active' : ''">{{item.title}}</p> 
+        </li> 
+        <li><img src="../../static/img/search.png" alt=""></li>
+      </ul> 
+<router-view></router-view>
+</div>
 </template>
-
 <script>
 export default {
-  data(){
-    return{
-      selected:""
+  data() {
+    return {
+      selected: "",
+      isSelect: "选车",
+      nav: [
+        {
+          title: "选车"
+        },
+        {
+          title: "二手车"
+        },
+        {
+          title: "金融"
+        }
+      ]
+    };
+  },
+  methods: {
+    selectNav(title) {
+      this.isSelect = title;
+    }
+  },
+  methods: {
+    selectNav(title) {
+      this.isSelect = title;
+      switch (title) {
+        case "选车":
+          this.$router.push("/cartaber/car");
+          break;
+        case "二手车":
+          this.$router.push("/cartaber/usedcar");
+          break;
+        case "金融":
+          this.$router.push("/cartaber/finance");
+          break;
+      }
+      sessionStorage.setItem("isSelect", this.isSelect);
     }
   }
 };
 </script>
 
-<style>
-@import url('../../static/css/common.css');
-@import url('../../static/css/persion.css');
+<style scoped>
+.active{
+  border-bottom: 2px solid black;
+}
+.cartaber{
+  background-color: white;
+}
+.cartaber ul{
+  font-size: 0px;
+  position: relative;
+}
+.cartaber ul li{
+  display: inline-block;
+  width: calc( 100% / 3.5 );
+  font-size: 15px;
+ 
+  text-align: center;
+}
+.cartaber ul li p{
+   padding: 10px 0px;
+}
+.cartaber ul li img{
+  width: 100%;
+  vertical-align: middle;
+}
+.cartaber ul li:last-child{
+  width: 20px !important;
+  position: absolute;top: 9px;
+  right: 10px;
+}
 </style>

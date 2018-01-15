@@ -23,14 +23,18 @@ import Edit from '../page/login/editorpassword.vue';
 import CarTaber from '../components/cartaber.vue';
 import Car from '../page/car/car.vue';
 import NewCarSearch from '../page/car/newcarsearch.vue';
-import NewCarExcel from '../page/car/newcarexcel.vue';
-import ChooseOrder from '../page/car/chooseorder.vue';
 import NewCarDetail from '../page/car/newcardetail.vue';
-import DetailStyle from '../page/car/detailstyle.vue';
 import CarPay from '../page/car/carpay.vue';
 import CarPaySuccess from '../page/car/carpaysuccess.vue';
 
 import UsedCar from '../page/usedcar/usedcar.vue';
+import UserCarDetail from '../page/usedcar/usercardetail.vue';
+import SaleCar from '../page/usedcar/salecar.vue';
+import CarAssess from '../page/usedcar/carassess.vue';
+import AssessResult from '../page/usedcar/assessresult.vue';
+import UsedCarSearch from '../page/usedcar/usedcarsearch.vue';
+import Appointment from '../page/usedcar/appointment.vue';
+import MakeSuccess from '../page/usedcar/makesuccess.vue';
 
 import Finance from '../page/finance/finance.vue';
 
@@ -68,14 +72,13 @@ export default new Router({
 
     {path: '/cartaber',name: 'CarTaber',component: CarTaber,children:[
       {path:'car',name: 'Car',component: Car},
+      // 二手车
       {path:'usedcar',name: 'UsedCar',component: UsedCar},
+      // 金融
       {path:'finance',name: 'Finance',component: Finance}
     ]},
     {path: '/newcarsearch',name: 'NewCarSearch',component: NewCarSearch},
-    {path: '/newcarexcel',name: 'NewCarExcel',component: NewCarExcel},
-    {path: '/chooseorder',name: 'ChooseOrder',component: ChooseOrder},
     {path: '/newcardetail',name: 'NewCarDetail',component: NewCarDetail},
-    {path: '/detailstyle',name: 'DetailStyle',component: DetailStyle}, 
     {path: '/carpay',name: 'CarPay',component: CarPay},
     {path: '/carpaysuccess',name: 'CarPaySuccess',component: CarPaySuccess},
 
@@ -85,5 +88,13 @@ export default new Router({
     {path: '/login',name: 'Login',component: Login},
     {path: '/register',name: 'Register',component: Register},
     {path: '/edit',name: 'Edit',component: Edit},   
+
+    {path: '/usercardetail',name: 'UserCarDetail',component: UserCarDetail},
+    {path: '/salecar',name: 'SaleCar',component: SaleCar},  
+    {path: '/carassess',name: 'CarAssess',component: CarAssess},  
+    {path: '/assessresult',name: 'AssessResult',component: AssessResult},  
+    {path: '/usedcarsearch',name: 'UsedCarSearch',component: UsedCarSearch}, 
+    {path: '/appointment',name: 'Appointment',component: Appointment}, 
+    {path: '/makesuccess',name: 'MakeSuccess',component: MakeSuccess}, 
   ]
 })

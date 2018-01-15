@@ -1,4 +1,4 @@
-*{padding: 0;margin:0;font-size: 16px;font-family: "微软雅黑";box-sizing: border-box;}
+*{padding: 0;margin:0;font-size: 16px;font-family: "微软雅黑";box-sizing: border-box; outline:none !important; }
 body{
     background-color: #DBDBDB;
 }
@@ -60,7 +60,7 @@ a{color: black;text-decoration: none;}
     font-size: 14px;
 }
 .text-size13{
-    font-size: 13px;
+    font-size: 13px !important;
 }
 .text-size12{
     font-size: 12px;
@@ -92,6 +92,9 @@ border-bottom: 1px solid #DBDBDB;
     }
 .bgc{
     background-color: white;
+}
+.color-white{
+    color:white;
 }
 .color{
     color: rgba(255,96,0,1);
@@ -209,6 +212,23 @@ border-bottom: 1px solid #DBDBDB;
     border-bottom: none !important;   
     border-left:none !important;
 }
+/* 选车轮播图 */
+
+.mint-swipe-indicator{
+    width: 5px;
+    height:5px;
+    border-radius: 1px;
+    opacity: 0.8;
+    }
+    .mint-swipe-item{
+    background-color: white !important;
+    }
+    .mint-swipe-indicator.is-active{
+    background-color: #1296db;
+    }
+    .mint-swipe-indicator{
+    background-color: #c6c6c6;
+    }
 /* 右箭头 */
 .height_47{
     width:100%;   

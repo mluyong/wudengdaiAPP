@@ -1,5 +1,6 @@
 <template>
   <div>
+      <router-link to="/newsDetail">
       <div class="news clearfix">
         <div class="float-left">
           <img src="../../../static/img/jinbei750.jpg" alt="">
@@ -9,6 +10,8 @@
           <p class="text-right text-size15 color51">2018-1-5</p>
         </div>
       </div>
+      </router-link>
+      <router-link to="/newsDetail">
       <div class="news clearfix">
         <div class="float-left">
           <img src="../../../static/img/jinbei750.jpg" alt="">
@@ -18,6 +21,7 @@
           <p class="text-right text-size15 color51">2018-1-5</p>
         </div>
       </div>
+      </router-link>
   </div>
 </template>
 <script>

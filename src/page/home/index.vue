@@ -4,7 +4,7 @@
            <h2>勿等贷</h2>
        </div>
        <div class="img">
-           <img src="../../../static/img/gs.jpg" alt="">
+           <img src="../../../static/img/4.jpg" alt="">
        </div>
        <div class="icon-list">
            <ul class="icon-icon">
@@ -43,7 +43,7 @@
                  <p>精品车型</p>
                  <p>为您甄选每一辆明星车型</p>
               </div>
-             <p class="right-list">查看更多</p>
+             <router-link to="/newcarsearch"><p class="right-list">查看更多</p></router-link>
             </div>
             <ul>
                 <li>

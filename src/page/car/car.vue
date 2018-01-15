@@ -1,7 +1,7 @@
 <template>
   <div>
       <div>
-          <img src="../../../static/img/gs.jpg" class="width100" alt="">
+          <img src="../../../static/img/4.jpg" class="width100" alt="">
       </div>
       <div class="opintion text-center text-size12">
           <ul class="text-size12 text-size">
@@ -25,8 +25,12 @@
       </div>
       <div class="buycar">
           <ul class="text-size text-size15">
-              <li class="text-center width100">查看全部优选车型</li>
-              <li class="text-center width100">我要买车</li>
+              <router-link to="/newcarsearch">
+                <li class="text-center width100 color-white">查看全部优选车型</li>
+              </router-link>
+              <router-link to="/newcarsearch">
+                <li class="text-center width100 color-white">我要买车</li>
+              </router-link>
           </ul>
       </div>
     <ul class="car-all clearfix">
@@ -119,6 +123,7 @@
                 </li>
             </ul>
        </div>
+       <div class="height_47"></div>
          <Taber></Taber>
   </div>
 </template>
@@ -132,7 +137,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+@import url('../../../static/css/common.css');
 .opintion,.buycar,.car-all,.jb,.dz{
     background-color: white;
 }
@@ -172,11 +178,11 @@ export default {
     background-color: white;
 }
 .car-all .title{
-    margin:0px 10px;
+    padding:10px 10px;
 }
 .car-all li {
     list-style: none;
-    padding: 9px 10px;
+    padding: 0px 10px;
     position: relative;
 }
 .car-all li div:first-child {

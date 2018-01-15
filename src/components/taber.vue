@@ -72,7 +72,7 @@ img {
   margin-top: 5px;
   position: absolute;
   bottom: 20px;
-  left: 38%;
+  left: 35%;
 }
 ul li:nth-of-type(1) img{
   width: 26px;
