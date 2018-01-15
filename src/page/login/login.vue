@@ -1,5 +1,6 @@
 <template>
   <div class="padding_67_75">
+    <div class="fixed"></div>
     	<div class="login margin-bottom_231">登录</div>
     	<form>
     		<div class="text_input_box margin-bottom_30">
@@ -73,6 +74,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
+@import url('../../../static/css/login.css');
+
+.fixed{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background:url('../../../static/img/backgrounds.jpg');
+  background-size: 100% 100%;
+  z-index: -99999999999999999999;
+}
 </style>

@@ -7,9 +7,9 @@
     </mt-header>
     <div class="imgall_box">
           <mt-swipe :auto="4000">
-            <mt-swipe-item><img src="../../../static/img/bck.jpg" /></mt-swipe-item>
-            <mt-swipe-item><img src="../../../static/img/bck.jpg" /></mt-swipe-item>
-            <mt-swipe-item><img src="../../../static/img/bck.jpg" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/backgrounds.jpg" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/backgrounds.jpg" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/backgrounds.jpg" /></mt-swipe-item>
           </mt-swipe>
     </div>
 
@@ -18,41 +18,53 @@
         <div class="float_left" >
           <div class="shop_box_pa background_white">
             <div class="img_box">
-              <img src="../../../static/img/bck.jpg" />
+              <img src="../../../static/img/backgrounds.jpg" />
             </div>
             <div class="shop_box_bottom">
-              <div>现在车载充电器</div>
-              <div>800积分</div>
+              <div class="title-tetx">现在车载充电器</div>
+              <div>
+                <span class="nubmer-text">800</span>
+                <span class="word-text">积分</span>
+              </div>
             </div>
           </div>
         </div>
       </router-link>
+
       <router-link to="/shopdetail">
         <div class="float_left" >
           <div class="shop_box_pa background_white">
             <div class="img_box">
-              <img src="../../../static/img/bck.jpg" />
+              <img src="../../../static/img/backgrounds.jpg" />
             </div>
             <div class="shop_box_bottom">
-              <div>现在车载充电器</div>
-              <div>800积分</div>
+              <div class="title-tetx">现在车载充电器</div>
+              <div>
+                <span class="nubmer-text">800</span>
+                <span class="word-text">积分</span>
+              </div>
             </div>
           </div>
         </div>
       </router-link>
+
       <router-link to="/shopdetail">
         <div class="float_left" >
           <div class="shop_box_pa background_white">
             <div class="img_box">
-              <img src="../../../static/img/bck.jpg" />
+              <img src="../../../static/img/backgrounds.jpg" />
             </div>
             <div class="shop_box_bottom">
-              <div>现在车载充电器</div>
-              <div>800积分</div>
+              <div class="title-tetx">现在车载充电器</div>
+              <div>
+                <span class="nubmer-text">800</span>
+                <span class="word-text">积分</span>
+              </div>
             </div>
           </div>
         </div>
       </router-link>
+    
 
     </div>
   </div>
@@ -65,9 +77,7 @@ export default {
     return {};
   },
   methods: {
-    beforeCreate: function() {
-    document.querySelector('body').setAttribute('style', 'background:#fff')
-  },
+   
   },
   created() {
     beforeCreate()
@@ -87,7 +97,6 @@ export default {
 }
 .shop_box {
   width:100%;
- font-size:0px;
 }
 .shop_box a>div{
   width:  calc( 100% / 2  ); 
@@ -95,11 +104,28 @@ export default {
 .shop_box a>div img{
   width: 100%;
 }
+.img_box{
+  height: 150px;
+  overflow: hidden;
+}
+.title-tetx{
+  font-size:15px;
+  line-height:24px;
+  color:#333;
+}
+.nubmer-text{
+  color:red;
+  font-size:14px;
+}
 .shop_box_pa{
   margin:5px;
 }
 .shop_box_bottom{
   padding:5px 10px;
+}
+.word-text{
+  font-size:12px;
+  color:#666;
 }
 
 </style>

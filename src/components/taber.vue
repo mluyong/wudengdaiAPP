@@ -1,67 +1,113 @@
 <template>
   <div>
-      <mt-tabbar class="fixed" v-model="selected">
-
-        <mt-tab-item id="主页">
-          <router-link to="/">
-          <img class="img1" src="../../static/img/home.png" alt=""><p>主页</p></router-link>
-        </mt-tab-item>
-
-        <mt-tab-item id="选车">
-          <router-link to="/car">
-          <img class="img2" src="../../static/img/car.png" alt=""><p>选车</p></router-link>
-        </mt-tab-item>
-
-        <mt-tab-item id="分享">
-          <router-link to="/share">
-          <img class="img3" src="../../static/img/share.png" alt=""><p>分享</p> </router-link>
-        </mt-tab-item>
-        
-        <mt-tab-item id="个人中心">
-          <router-link to="/me">
-          <img class="img4" src="../../static/img/me.png" alt=""><p>个人中心</p></router-link>
-        </mt-tab-item>
-      </mt-tabbar>
+      <ul> 
+        <li v-for="item in nav" @click="selectNav(item.title)" v-bind:key="item.title"> 
+         <img :src="isSelect === item.title ? item.url_one : item.url" alt="item.title"> 
+         <p :class="isSelect === item.title ? 'active' : ''">{{item.title}}</p> 
+        </li> 
+      </ul> 
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-        return{
-           selected:'' 
+  data() {
+    return {
+      selected: "",
+      isSelect: "主页",
+      nav: [
+        {
+          title: "主页",
+          url: require("../../static/img/home.png"),
+          url_one: require("../../static/img/homes.png")
+        },
+        {
+          title: "选车",
+          url: require("../../static/img/car.png"),
+          url_one: require("../../static/img/cars.png")
+        },
+        {
+          title: "分享",
+          url: require("../../static/img/share.png"),
+          url_one: require("../../static/img/shares.png")
+        },
+        {
+          title: "个人中心",
+          url: require("../../static/img/me.png"),
+          url_one: require("../../static/img/mes.png")
         }
-        
-    },
-}
+      ]
+    };
+  },
+  methods: {
+    selectNav(title) {
+      this.isSelect = title;
+    }
+  },
+  methods: {
+    selectNav(title) {
+      this.isSelect = title;
+      switch (title) {
+        case "主页":
+          this.$router.push("/");
+          break;
+        case "选车":
+          this.$router.push("/cartaber/car");
+          break;
+        case "分享":
+          this.$router.push("/share");
+          break;
+        case "个人中心":
+          this.$router.push("/me");
+          break;
+      }
+      sessionStorage.setItem("isSelect", this.isSelect);
+    }
+  }
+};
 </script>
 
 <style scoped>
-.fixed{
-  position: fixed;
-  bottom: 0px;
-}
-img{
+img {
   margin-top: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 38%;
 }
-.img1{
+ul li:nth-of-type(1) img{
+  width: 26px;
+}
+ul li:nth-of-type(2) img{
   width: 28px;
-  margin-top: 5px;
 }
-.img2{
-  width: 28.5px;
+ul li:nth-of-type(3) img{
+  width: 24px;
 }
-.img3{
-  width: 27px;
+ul li:nth-of-type(4) img{
+  width: 21px;
 }
-.img4{
-  width: 23px;
-}
-*{
+* {
   font-size: 10px;
   padding: 0px;
 }
-p{
-  line-height: 15px
+p {
+  line-height: 15px;
+  padding-top: 32px;
+  width: 100%;;
+}
+ul{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  font-size: 0px;
+  text-align: center;
+  background-color: white;
+}
+ul li{
+  width: calc( 100% / 4 );
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
 }
 </style>

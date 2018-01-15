@@ -6,25 +6,37 @@
       </router-link>
     </mt-header>
     <div class="detail_img_box">
-      <img src="../../../static/img/bck.jpg" />
+      <img src="../../../static/img/backgrounds.jpg" />
     </div> 
-    <div class="padding_10 background_white">
-      <div class="">现代车载充电器</div>
-      <div>
-        <img/>
-        <span>800积分</span>
+    <div class="padding_10 background_white margin-bottom-5">
+      <div class="nav-word margin-bottom-5">现代车载充电器</div>
+      <div class="line-height-20">
+        <img src="../../../static/img/integral.png" style="width:16px;margin-right:10px;"/>
+        <span class="font-size-16 color-r">800</span>
+        <span>积分</span>
       </div>
-      <div >市场参考价：98元</div>
+      <div class="line-height-20">市场参考价：98元</div>
     </div>
-    <div class="gray_line"></div>
-    <div class="padding_10 background_white">
-      <div>商品描述</div>
-      <div>品名：现代车载充电器</div>
-      <div>品牌：现代</div>
-      <div>颜色：黑色、银色、红色、蓝色</div>
-      <div>型号：SPS12</div>
+
+    <div class="padding_10 background_white margin-bottom-5">
+      <div class="line-height-20 margin-bottom-5">商品描述</div>
+      <div class="line-height-20">
+        <span>品名：</span>
+        <span>现代车载充电器</span>
+      </div>
+      <div class="line-height-20">
+        <span>品牌：</span>
+        <span>现代</span>
+      </div>
+      <div class="line-height-20">
+        <span>颜色：</span>
+        <span>黑色、银色、红色、蓝色</span>
+      </div>
+      <div class="line-height-20">
+        <span>型号：</span>
+        <span>SPS12</span>
+      </div>
     </div>
-    <div class="gray_line"></div>
 
 
 
@@ -58,22 +70,37 @@ export default {
 
 <style scoped>
 @import url("../../../static/css/common.css");
-.background_white{
-  background:white;
+div,span{
+  font-size:12px;
+  color:#666;
 }
-.gray_line{
-  width:100%;
-  height: 6px;
+.nav-word{
+  font-size:15px;
+  color:#333;
+}
+.line-height-20{
+  line-height: 20px;
+}
+.margin-bottom-5{
+  margin-bottom: 5px;
 
 }
 .detail_img_box{
   width:100%;
+  max-height: 350px;
+  overflow: hidden;
 }
 .detail_img_box img{
 width: 100%
 }
 .padding_10{
   padding: 10px;
+}
+.font-size-16{
+  font-size:16px;
+}
+.color-r{
+   color:red;
 }
 
 

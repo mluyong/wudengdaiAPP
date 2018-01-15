@@ -1,0 +1,99 @@
+
+div,span{
+    font-size:14px;
+}
+.gray_line_d{
+    width:100%;
+    height: 1px;
+    background:#e1e1e1;
+  }
+  .margin-bottom-6{
+      margin-bottom: 6px;
+  }
+  .c-red{
+      color: red;
+  }
+  .font-color-all{
+      color:#333333;
+  }
+  .font-color{
+      color: #666666;
+  }
+  .font-size-12{
+      font-size:12px;
+  }
+  .font-size-16{
+      font-size:16px;
+  }
+  .padding_lr{
+    padding-left:15px;
+    padding-right: 15px;
+  }
+  .padding_tt{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .line_height_20{
+    line-height: 22px;
+  }
+  .line_height_30{
+    line-height: 30px;
+  }
+  .line_height_50{
+    line-height: 50px;
+  }
+  .img_box{
+    width:100px;
+    height: 100px;
+    background: pink;
+    overflow: hidden;
+  }
+  .img_box img{
+    width: 100%;
+  }
+  .rigth-s-img{
+      width:10px;
+      line-height:50px;
+  }
+  .rigth-s-img img{
+      width:100%;
+  }
+  .pay_ok{
+      width:100%;
+      height:200px;
+      background: white;
+      text-align: center;
+  }
+  .pay_ok_top{
+      width:200px;
+      height:40px;
+      margin:0 auto;
+      background: pink;
+  }
+  .pay_ok_bottom{
+      width:150px;
+      height: 150px;
+      margin:0 auto;
+      background:pink;
+      margin-top:10px;
+  }
+  .contect-shop{
+      width:100%;
+      height:24px;
+      font-size:12px;
+      margin-top:20px;
+      margin-bottom:10px;
+      text-align: center;
+  }
+  .select-box{
+    border:none;
+    font-size:14px;
+    color:#333;
+    outline:none;
+  }
+  .select-box option{
+    font-size:12px;
+    outline: none;
+    border:1px solid #333;
+  }
+  

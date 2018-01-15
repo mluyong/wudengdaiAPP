@@ -1,5 +1,4 @@
 /*登录注册找回密码的背景图片*/
-body{width:100%;height: 100%;background-image:url(../img/backgrounds.jpg);background-size:100%;}
 /*登录注册找回密码几个字*/
 .login{width: 100%;text-align: center;font-size:18px;}
 /*input的外框*/

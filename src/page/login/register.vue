@@ -1,5 +1,6 @@
 <template>
   <div class="padding_67_75">
+    <div class="fixed"></div>
 		<div class="login margin-bottom_85">注册</div>
 		<div class="margin-bottom_10">
 			<input class="text_input_two" required="required" @blur="checkMobile()" v-model="phone" placeholder="请输入手机号" type="text" />
@@ -141,6 +142,19 @@ export default {
 };
 </script>
 
-<style>
 
+<style scoped>
+
+@import url('../../../static/css/login.css');
+
+.fixed{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background:url('../../../static/img/backgrounds.jpg');
+  background-size: 100% 100%;
+  z-index: -99999999999999999999;
+}
 </style>
