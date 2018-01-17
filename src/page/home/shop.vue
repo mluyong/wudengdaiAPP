@@ -1,7 +1,7 @@
 <template>
   <div>
     <mt-header title="积分商城">
-      <router-link to="/" slot="left">
+      <router-link to="/taber/" slot="left">
       <mt-button icon="back"></mt-button>
       </router-link>
     </mt-header>

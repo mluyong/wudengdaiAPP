@@ -21,8 +21,9 @@
     		</div>
     	</form>
     	<div class="imgbox">
-    		<img src="../../../static/img/qq.jpg" class="float_left"/>
-    		<img src="../../../static/img/weixin.jpg" class="float_right"/>
+    		<div class="float_left"><img src="../../../static/img/qq.jpg"/></div>
+        <div class="float_left"><img src="../../../static/img/weixin.jpg"/></div>
+    		<div class="float_left"><img src="../../../static/img/weixin.jpg"/></div>
     	</div>
 		<router-view></router-view>
     </div>

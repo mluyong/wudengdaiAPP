@@ -53,79 +53,83 @@
 	</div>
 	<div class="user-own clearfix">
 		<ul>
-			<li>
-				<router-link to="/order">
-					<div class="float_left">
-						<img src="../../../static/img/order.png" alt="">
-						<span>我的订单</span>
-					</div>
-					<div class="float_right">
-						<img src="../../../static/img/go-back.png" alt="">
-					</div>
+				<router-link to="/myorder">
+						<li>
+								<div class="float_left">
+									<img src="../../../static/img/order.png" alt="">
+									<span>我的订单</span>
+								</div>
+								<div class="float_right">
+									<img src="../../../static/img/go-back.png" alt="">
+								</div>
+						</li>
 				</router-link>
-			</li>
-			<li>
-				<a href="">
-					<div class="float_left">
-						<img src="../../../static/img/Collection.png" alt="">
-						<span>我的收藏</span>
-					</div>
-					<div class="float_right">
-						<img src="../../../static/img/go-back.png" alt="">
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<div class="float_left">
-						<img src="../../../static/img/frident.png" alt="">
-						<span>我的好友</span>
-					</div>
-					<div class="float_right">
-						<img src="../../../static/img/go-back.png" alt="">
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<div class="float_left">
-						<img src="../../../static/img/kccl.png" alt="">
-						<span>我的车库</span>
-					</div>
-					<div class="float_right">
-						<img src="../../../static/img/go-back.png" alt="">
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<div class="float_left">
-						<img src="../../../static/img/xxzx.png" alt="">
-						<span>消息中心
-							<div class="new">3</div>
-						</span>
-					</div>
-					<div class="float_right">
-						<img src="../../../static/img/go-back.png" alt="">
-					</div>
-				</a>
-			</li>
+				<router-link to="/mycollent">
+					<li>
+						<a href="">
+							<div class="float_left">
+								<img src="../../../static/img/Collection.png" alt="">
+								<span>我的收藏</span>
+							</div>
+							<div class="float_right">
+								<img src="../../../static/img/go-back.png" alt="">
+							</div>
+						</a>
+					</li>
+				</router-link>
+				<router-link to="/myfriend">
+					<li>
+						<a href="">
+							<div class="float_left">
+								<img src="../../../static/img/frident.png" alt="">
+								<span>我的好友</span>
+							</div>
+							<div class="float_right">
+								<img src="../../../static/img/go-back.png" alt="">
+							</div>
+						</a>
+					</li>
+				</router-link>
+				<router-link to="/mycarhouse">
+					<li>
+						<a href="">
+							<div class="float_left">
+								<img src="../../../static/img/kccl.png" alt="">
+								<span>我的车库</span>
+							</div>
+							<div class="float_right">
+								<img src="../../../static/img/go-back.png" alt="">
+							</div>
+						</a>
+					</li>
+				</router-link>
+				<router-link to="/myorder">
+					<li>
+						<a href="">
+							<div class="float_left">
+								<img src="../../../static/img/xxzx.png" alt="">
+								<span>消息中心
+									<div class="new">3</div>
+								</span>
+							</div>
+							<div class="float_right">
+								<img src="../../../static/img/go-back.png" alt="">
+							</div>
+						</a>
+					</li>
+				</router-link>
 		</ul>
 	</div>
 	<div class="height_47"></div>
-	<Taber></Taber>
   </div>
 </template>
 
 <script>
-import Taber from "../../components/taber.vue";
 export default {
   data() {
     return {};
   },
-  components: {
-    Taber: Taber
-  }
+ 
 };
 </script>
 

@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url("../../../static/css/common.css");
 @import url("../../../static/css/pay.css");
 

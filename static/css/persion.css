@@ -4,13 +4,11 @@
     display: inline-block;
     width: 14px;
     height: 14px;
-    vertical-align: middle;
-    padding: 3px;
     color: rgb(0, 0, 0);
-    border-radius: 50px;
+    border-radius: 7px 7px;
     background-color: red;
     font-size: 12px;
-    line-height: 10px;
+    line-height: 14px;
     color: white;
 }
 .order-header{
@@ -119,4 +117,22 @@ a.mint-searchbar-cancel{
 .mint-searchbar-core{
     margin-right: 5px;
     background-color: none;
+}
+
+/* 我要买车 */
+.salecar .salecar-phone-all{
+   background-color: white;
+   padding: 5px 0px;
+}
+.salecar .el-select{
+    width: 100px;
+    float: left;
+    border-right: 1px solid rgba(214,214,214,1);
+}
+.salecar .el-input input.el-input__inner{
+    padding: 0 10px 0 20px !important;
+    border: none !important;
+  }
+.popper__arrow{
+    left: 83% !important;
 }

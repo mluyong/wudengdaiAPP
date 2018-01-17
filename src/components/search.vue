@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('../../static/css/persion.css');
 .search-one p,.search-one ul li{
   color: rgba(66,66,66,1);

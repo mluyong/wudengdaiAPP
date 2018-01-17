@@ -1,30 +1,35 @@
 <template>
   <div class="content">
-       <div class="title">
-           <h2>勿等贷</h2>
+       <div class="title">勿等贷</div>
+       <div class="index-img">
+           <img src="../../../static/img/share.jpg" alt="">
        </div>
-       <div class="img">
-           <img src="../../../static/img/4.jpg" alt="">
-       </div>
+
        <div class="icon-list">
            <ul class="icon-icon">
-               <li class="list">
+              <li class="list">
+                  <router-link to="/taber/finance">
                    <span>
                        <img src="../../../static/img/jr.png" alt="">
                    </span>
                    <p>金融服务</p>
+                  </router-link>
                </li>
                <li class="list">
+                  <router-link to="/taber/usedcar"> 
                    <span>
                        <img src="../../../static/img/esc.png" alt="">
                    </span>
                    <p>二手车</p>
+                   </router-link>
                </li>
                <li class="list">
+                 <router-link to="/"> 
                    <span>
                        <img src="../../../static/img/zy.png" alt="">
                    </span>
                    <p>违章查询</p>
+                   </router-link>
                </li>
                <li class="list">
                  <router-link to="/shop"> 
@@ -32,12 +37,12 @@
                        <img src="../../../static/img/jfsc.png" alt="">
                    </span>
                    <p>积分商城</p>
-                   </router-link>
-                  
+                   </router-link>                 
                </li>
+               <div class="clear"></div>
            </ul>
        </div>
-       <div class="boutique boutique-car clearfix">
+       <div class="boutique clearfix">
            <div class="b-nav clearfix">
              <div class="left-list">
                  <p>精品车型</p>
@@ -106,95 +111,73 @@
             </div>
        </div>
        <div class="height_47"></div>
-    <Taber></Taber>
   </div>
 </template>
 
 <script>
-import Taber from "../../components/taber";
 export default {
-  components: {
-    Taber
-  }
+ 
 };
 </script>
 
 <style scoped>
+@import url('../../../static/css/common.css');
 .content {
   background-color: white;
 }
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "微软雅黑";
-  box-sizing: border-box;
-}
-ul li {
-  list-style: none;
-}
+
 a {
   text-decoration: none;
 }
 .title {
   height: 45px;
   text-align: center;
-}
-.title h2 {
-  margin: 0 auto;
   font-size: 18px;
   line-height: 44px;
   font-weight: 500;
 }
-.img img {
+.index-img{
   width: 100%;
   height: 187px;
-  margin: 0 auto;
+  overflow: hidden;
 }
-.icon-icon {
-  height: 100px;
-  margin: 0px;
-  font-size: 0px;
+.index-img img {
+  width: 100%;
 }
-.icon-icon ul {
-  padding: 10px 0 0 0;
+.icon-list{
+  padding: 0 10px;
+}
+.icon-icon{
+  width: 100%;
 }
 .icon-icon li {
-  width: calc(100% / 4);
-  display: inline-block;
+  width: 25%;
+  float: left;
   text-align: center;
   margin: 20px 0;
   cursor: pointer;
 }
 .icon-icon li img {
   width: 36px;
-  height: 36px;
+  margin-bottom:6px;
 }
 .icon-icon li p {
   font-size: 10px;
-}
-.icon-list{
-  padding: 0 10px;
-}
-.icon-list ul {
-  font-size: 0px;
-}
-.icon-list li {
-  width: calc(100% / 4 -10px);
-}
-.icon-list li p {
   color: #000000;
 }
+
+
+
+
 .boutique {
   width: 100%;
-  padding: 0 10px;
+  padding:10px;
   position: relative;
   border-top: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
 }
 .boutique .b-nav {
   width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
 }
 .boutique ul {
   width: 100%;

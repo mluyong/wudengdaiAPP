@@ -1,6 +1,6 @@
 <template>
   <div class="background_white">
-      <div class="header width100">
+        <div class="header width100">
           <div class="border-bottom">
             <mt-header title="咨询详情">
               <router-link to="/news/report" slot="left">

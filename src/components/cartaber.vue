@@ -13,8 +13,7 @@
 export default {
   data() {
     return {
-      selected: "",
-      isSelect: "选车",
+      isSelect: "二手车",
       nav: [
         {
           title: "选车"
@@ -28,17 +27,13 @@ export default {
       ]
     };
   },
-  methods: {
-    selectNav(title) {
-      this.isSelect = title;
-    }
-  },
+ 
   methods: {
     selectNav(title) {
       this.isSelect = title;
       switch (title) {
         case "选车":
-          this.$router.push("/cartaber/car");
+          this.$router.push("/taber/car");
           break;
         case "二手车":
           this.$router.push("/cartaber/usedcar");
@@ -54,33 +49,5 @@ export default {
 </script>
 
 <style scoped>
-.active{
-  border-bottom: 2px solid black;
-}
-.cartaber{
-  background-color: white;
-}
-.cartaber ul{
-  font-size: 0px;
-  position: relative;
-}
-.cartaber ul li{
-  display: inline-block;
-  width: calc( 100% / 3.5 );
-  font-size: 15px;
- 
-  text-align: center;
-}
-.cartaber ul li p{
-   padding: 10px 0px;
-}
-.cartaber ul li img{
-  width: 100%;
-  vertical-align: middle;
-}
-.cartaber ul li:last-child{
-  width: 20px !important;
-  position: absolute;top: 9px;
-  right: 10px;
-}
+
 </style>

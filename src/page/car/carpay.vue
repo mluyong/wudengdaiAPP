@@ -59,7 +59,7 @@
     </div>
     <div class="gray_line_d"></div>
 
-   <div class="padding_lr line_height_50 background_white">
+   <div class=" line_height_50 background_white">
       <mt-cell title="二维码" label="" is-link></mt-cell>
   </div>
 

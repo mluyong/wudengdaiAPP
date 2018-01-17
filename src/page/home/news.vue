@@ -2,7 +2,7 @@
   <div>
       <div class="div1"> 
         <mt-header title="咨询信息">
-        <router-link to="/" slot="left">
+        <router-link to="/taber/" slot="left">
         <mt-button icon="back"></mt-button>
         </router-link>
       </mt-header>
@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('../../../static/css/common.css');
 @import url('../../../static/css/persion.css');
 .actives {
