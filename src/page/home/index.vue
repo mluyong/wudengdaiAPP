@@ -8,7 +8,7 @@
        <div class="icon-list">
            <ul class="icon-icon">
               <li class="list">
-                  <router-link to="/taber/finance">
+                  <router-link to="/finance">
                    <span>
                        <img src="../../../static/img/jr.png" alt="">
                    </span>
@@ -16,7 +16,7 @@
                   </router-link>
                </li>
                <li class="list">
-                  <router-link to="/taber/usedcar"> 
+                  <router-link to="/usedcar"> 
                    <span>
                        <img src="../../../static/img/esc.png" alt="">
                    </span>

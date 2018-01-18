@@ -1,7 +1,7 @@
 <template>
   <div>
       <mt-header class="border-bottom" title="我的收藏">
-        <router-link to="/taber/me" slot="left">
+        <router-link to="/me" slot="left">
         <mt-button icon="back"></mt-button>
         </router-link>
       </mt-header>

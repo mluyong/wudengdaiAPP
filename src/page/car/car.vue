@@ -3,14 +3,12 @@
 <div class="cartaber">
       <ul> 
         <li><p class="active-two">选车</p></li> 
-        <li><router-link to="/taber/usedcar"><p>二手车</p> </router-link></li>
-        <li><router-link to="/taber/finance"><p>金融</p></router-link></li> 
+        <li><router-link to="/usedcar"><p>二手车</p> </router-link></li>
+        <li><router-link to="/finance"><p>金融</p></router-link></li> 
         <li><img src="../../../static/img/search.png" alt=""></li>
       </ul> 
        <router-view></router-view>
  </div>
-
-
 
        <div class="car-top-img">
            <img src="../../../static/img/4.jpg" alt="">
@@ -178,6 +176,7 @@ export default {
 }
 .car-top-img img{
     width:100%;
+    height: 100%;
 }
 
 .opintion,.buycar,.car-all,.jb,.dz{

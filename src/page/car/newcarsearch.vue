@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="nav-search">
-      <router-link to="/taber/car"><div class="float_left">
+      <router-link to="/car"><div class="float_left">
         <img src="../../../static/img/go-back-left.png"/>
       </div></router-link>
       <div class="float_right nav-search-new">重置</div>

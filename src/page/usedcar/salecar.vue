@@ -1,7 +1,7 @@
 <template>
   <div>
     <mt-header title="我要买车">
-      <router-link to="/taber/usedcar" slot="left">
+      <router-link to="/usedcar" slot="left">
       <mt-button icon="back"></mt-button>
       </router-link>
     </mt-header>

@@ -3,8 +3,8 @@
 
 <div class="cartaber">
       <ul> 
-        <li><router-link to="/taber/car"><p>选车</p></router-link></li> 
-        <li><router-link to="/taber/usedcar"><p>二手车</p> </router-link></li>
+        <li><router-link to="/car"><p>选车</p></router-link></li> 
+        <li><router-link to="/usedcar"><p>二手车</p> </router-link></li>
         <li><p class="active-two">金融</p></li> 
         <li><img src="../../../static/img/search.png" alt=""></li>
       </ul> 
@@ -149,6 +149,7 @@ export default {
 }
 .car-top-img img{
     width:100%;
+    height: 100%;
 }
 
 .color-more{

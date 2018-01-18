@@ -2,7 +2,7 @@
 
 <div>
 <mt-header title="车险">
-      <router-link to="/taber/finance" slot="left">
+      <router-link to="/finance" slot="left">
       <mt-button icon="back"></mt-button>
       </router-link>
     </mt-header>

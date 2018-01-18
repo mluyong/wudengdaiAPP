@@ -1,7 +1,7 @@
 <template>
   <div>
      <mt-header title="我的订单">
-        <router-link to="/taber/me" slot="left">
+        <router-link to="/me" slot="left">
         <mt-button icon="back"></mt-button>
         </router-link>
       </mt-header>

@@ -5,7 +5,7 @@
              <img src="../../../static/img/share.jpg"/>
         </div>
         <div class="share-btn-box">
-             <mt-button size="normal">邀请好友</mt-button>
+             <mt-button size="normal" @click="normalClick()">邀请好友</mt-button>
         </div>
         <div class="share-four-box">
               <div class="share-four">
@@ -51,7 +51,7 @@
 
 <script>
 export default {
-
+  
 }
 </script>
 

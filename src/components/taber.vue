@@ -46,16 +46,16 @@ export default {
       this.isSelect = title;
       switch (title) {
         case "主页":
-          this.$router.push("/taber");
+          this.$router.push("/");
           break;
         case "选车":
-          this.$router.push("/taber/car");
+          this.$router.push("/car");
           break;
         case "分享":
-          this.$router.push("/taber/share");
+          this.$router.push("/share");
           break;
         case "个人中心":
-          this.$router.push("/taber/me");
+          this.$router.push("/me");
           break;
       }
      sessionStorage.setItem("isSelect", this.isSelect);

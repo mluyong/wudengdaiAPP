@@ -2,9 +2,9 @@
   <div>
 <div class="cartaber">
       <ul> 
-        <li><router-link to="/taber/car"><p>选车</p></router-link></li> 
+        <li><router-link to="/car"><p>选车</p></router-link></li> 
         <li><p  class="active-two">二手车</p></li>
-        <li><router-link to="/taber/finance"><p>金融</p></router-link></li> 
+        <li><router-link to="/finance"><p>金融</p></router-link></li> 
         <li><img src="../../../static/img/search.png" alt=""></li>
       </ul> 
        <router-view></router-view>

@@ -2,7 +2,7 @@
   <div>
       <div class="div1"> 
         <mt-header title="咨询信息">
-        <router-link to="/taber/" slot="left">
+        <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
         </router-link>
       </mt-header>

@@ -33,7 +33,7 @@ export default {
       this.isSelect = title;
       switch (title) {
         case "选车":
-          this.$router.push("/taber/car");
+          this.$router.push("/car");
           break;
         case "二手车":
           this.$router.push("/cartaber/usedcar");

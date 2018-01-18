@@ -72,8 +72,8 @@ export default new Router({
     { path: '/appointpop', name: 'AppointPop', component: AppointPop },
    
     {
-      path: '/taber', name: 'Taber', component: Taber, children: [
-        { path: '', name: 'Home', component: Home },
+      path: '/', name: 'Taber', redirect:"/home", component: Taber, children: [
+        { path: 'home', name: 'Home', component: Home },
         //选车
         { path:'car',name: 'Car',component: Car },
         //二手车

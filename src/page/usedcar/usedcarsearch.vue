@@ -1,7 +1,7 @@
 <template>
   <div class="position">
     <div class="search-car clearfix">
-      <router-link to="/taber/usedcar"><div class="search-car-go"><img src="../../../static/img/go-back-left.png" alt=""></div></router-link>
+      <router-link to="/usedcar"><div class="search-car-go"><img src="../../../static/img/go-back-left.png" alt=""></div></router-link>
       <div class="search-car-input clearfix"><img src="../../../static/img/search.png" alt=""><input type="text" placeholder="搜索"></div>
       <div class="Reset">重置</div>
     </div>
