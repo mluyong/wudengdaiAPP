@@ -91,7 +91,7 @@ export default {
         { text: "货币型" },
         { text: "混合型" }
       ],
-      nowIndex: -1
+      nowIndex:0
     };
   },
    methods: {

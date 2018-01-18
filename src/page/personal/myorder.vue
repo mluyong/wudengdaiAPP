@@ -10,6 +10,7 @@
            <li class="li-box" v-for="(order,index) in order" v-bind:key="order.text" v-bind:class="{checked:index==nowIndex}" v-on:click="orderClick(index)">{{order.text}}</li>
         </ul>
     </div>
+<router-link to="/orderdetail">
     <div class="user-order margin-bottom-5">
         <div class="bgc">
             <div class="clearfix order-number">
@@ -20,7 +21,7 @@
             </div>
             <div class="clearfix user-car-all border-bottom">
                 <div class="car-img float_left">
-                    <img src="../../../static/img/cars.png" alt="">
+                    <img src="../../../static/img/4.jpg" alt="">
                 </div>
                 <div class="float_left user-car-all-right padding-left10">
                     <p class="text-size13 line-height20">金杯750 2015款 1.5L 豪华型 </p>
@@ -38,16 +39,43 @@
             </div>
         </div>  
     </div>
+</router-link>
 
 
-
-    <div class="user-order">
+    <div class="user-order margin-bottom-5">
         <div class="bgc">
             <div class="clearfix order-number">
                 <p class="float_left text-size14">订单编号
                     <span class="text-size14">330581284</span>
                 </p>
-                <p class="float_right color2 text-size10">2018-01-02 16:23</p>
+                <p class="float_right color2 text-size14">待付款</p>
+            </div>
+            <div class="clearfix user-car-all border-bottom">
+                <div class="car-img float_left">
+                    <img src="../../../static/img/backgrounds.jpg" alt="">
+                </div>
+                <div class="float_left user-car-all-right padding-left10">
+                    <p class="text-size13 line-height20">金杯750 2015款 1.5L 豪华型 </p>
+                    <p class="text-size12 line-height20">产商指导价：8.88万</p>
+                    <p class="text-size12 line-height20">尊享价：7.92万</p>
+                    <div class="clearfix text-size padding-top15">
+                        <p class="float_left text-size12 color-red">支付金额：1000（定金）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="btn1 float_right">立即支付</div>
+            </div>
+        </div>  
+    </div>
+
+     <div class="user-order margin-bottom-5">
+        <div class="bgc">
+            <div class="clearfix order-number">
+                <p class="float_left text-size14">订单编号
+                    <span class="text-size14">330581284</span>
+                </p>
+                <p class="float_right color2 text-size14">待付款</p>
             </div>
             <div class="clearfix user-car-all border-bottom">
                 <div class="car-img float_left">
@@ -58,14 +86,12 @@
                     <p class="text-size12 line-height20">产商指导价：8.88万</p>
                     <p class="text-size12 line-height20">尊享价：7.92万</p>
                     <div class="clearfix text-size padding-top15">
-                        <p class="float_left text-size12 color-red">支付金额：1000（定金）</p>
-                        <div class="refund float_right">申请退款</div>
+                        <p class="float_left text-size12 color-red">积分：1000</p>
                     </div>
                 </div>
             </div>
             <div class="clearfix">
-                <div class="btn1 float_right">确认收货</div>
-                <div class="btn1 float_right">二维码</div>
+                <div class="btn1 float_right">快递单号</div>
             </div>
         </div>  
     </div>

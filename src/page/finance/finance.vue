@@ -14,7 +14,11 @@
 
 
         <div class="car-top-img">
-           <img src="../../../static/img/4.jpg" alt="">
+           <mt-swipe :auto="4000">
+            <mt-swipe-item><img src="../../../static/img/fund.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/fund.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/fund.png" /></mt-swipe-item>
+          </mt-swipe>
        </div>
 
         <div class="finance-title">
@@ -149,7 +153,6 @@ export default {
 }
 .car-top-img img{
     width:100%;
-    height: 100%;
 }
 
 .color-more{

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header title="我要买车">
+    <mt-header title="我要卖车">
       <router-link to="/usedcar" slot="left">
       <mt-button icon="back"></mt-button>
       </router-link>
@@ -12,7 +12,7 @@
             <div class="salecar-phone clearfix">
               <el-select v-model="value" placeholder="请选择">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-                </el-option>
+              </el-option>
               </el-select>
               <div class="salecar-phone-bgi">
                 <input type="text" placeholder="请输入手机号">
@@ -147,6 +147,7 @@ export default {
   padding: 4.5px 0px 4.5px 10px;
   border-bottom: 1px solid #dbdbdb;
 }
+
 .salecar-phone-bgi {
   width: calc( 100% - 120px );
   height: 30px;
@@ -249,4 +250,8 @@ p.salecar-p .border{
   color: rgba(51,51,51,1);
   line-height: 30px;
 }
+
+
+
+
 </style>

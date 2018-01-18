@@ -11,6 +11,8 @@
                <li>好友最多</li>
            </ul>
        </div>
+      
+      <router-link to="/frienddetail">
        <div class="myfriend-list clearfix">
           <div class="myfriend-list-content clearfix">
             <div class="myfriend-list-left">
@@ -19,7 +21,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <span>我</span>
@@ -42,6 +44,9 @@
              </ul>    
           </div>
        </div>
+    </router-link>
+
+
         <div class="myfriend-list-li clearfix">
           <div class="myfriend-list-content clearfix">
             <div class="myfriend-list-left">
@@ -50,7 +55,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <!-- <span>我</span>
@@ -81,7 +86,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <!-- <span>我</span>

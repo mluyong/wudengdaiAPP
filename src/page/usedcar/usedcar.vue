@@ -12,7 +12,11 @@
 
 
        <div class="car-top-img">
-           <img src="../../../static/img/4.jpg" alt="">
+           <mt-swipe :auto="4000">
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+          </mt-swipe>
        </div>
         <div class="secondhandcar-opintion text-center text-size12 background_white">
           <ul class="text-size">

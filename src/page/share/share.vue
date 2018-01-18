@@ -45,17 +45,43 @@
                 
               </div>
         </div>
+        <mt-popup v-model="popupVisible" position="bottom" modal="false" closeOnClickModal="false">
+            <div class="share-normal-bottom">
+              <p>分享到站外：</p>
+              <ul>
+                <li><img src="../../../static/img/zy.png" alt=""><p>微信朋友圈</p></li>
+                <li><img src="../../../static/img/zy.png" alt=""><p>微信好友</p></li>
+                <li><img src="../../../static/img/zy.png" alt=""><p>QQ空间</p></li>
+                <li><img src="../../../static/img/zy.png" alt=""><p>QQ好友</p></li>
+                <li><img src="../../../static/img/zy.png" alt=""><p>微博</p></li>
+              </ul>
+            <p class="share-cancel" @click="cancelClick()">取消</p> 
+            </div>
+        </mt-popup>
         <div class="height_47"></div>
   </div>
 </template>
 
 <script>
 export default {
-  
+  data(){
+    return{
+      popupVisible:false
+    }
+  },
+  methods:{
+    normalClick:function(){
+      this.popupVisible=true;
+    },
+    cancelClick:function(){
+      this.popupVisible=false
+    }
+  }
 }
 </script>
 
 <style scoped>
+@import url('../../../static/css/common.css');
 .share-nav{
   width:100%;
   line-height: 40px;
@@ -145,5 +171,44 @@ export default {
   padding:10px;
   font-size:12px;
   color:#666;
+}
+
+.mint-popup.mint-popup-bottom{
+  width: 100%;
+  z-index: 9999999 !important ;
+}
+.share-normal-bottom{
+  background-color: #D6D3CA;
+ 
+}
+.share-normal-bottom>p:first-child{
+  font-size: 3.5vw;
+  color: #333;
+  line-height: 12vw;
+  padding-left: 10px;
+}
+.share-normal-bottom ul{
+  font-size: 0px;
+  text-align: center; 
+  padding-bottom: 10px;
+}
+.share-normal-bottom ul li{
+  width: calc( 100% / 5 );
+  display: inline-block;
+  font-size: 3vw;
+  color: rgb(48, 48, 48);
+  padding: 0 5px;
+}
+.share-normal-bottom ul li img{
+  width: 80%;
+}
+p.share-cancel{
+  width: 100%;
+  text-align: center;
+  line-height: 12vw;
+  font-size: 4vw;
+  border-top: 1px solid rgba(145, 145, 145, 0.623);
+  background-color: none;
+  color: rgb(27, 27, 27);
 }
 </style>

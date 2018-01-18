@@ -2,7 +2,11 @@
   <div class="content">
        <div class="title">勿等贷</div>
        <div class="index-img">
-           <img src="../../../static/img/share.jpg" alt="">
+         <mt-swipe :auto="4000">
+            <mt-swipe-item><img src="../../../static/img/index.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/index.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/index.png" /></mt-swipe-item>
+          </mt-swipe>
        </div>
 
        <div class="icon-list">

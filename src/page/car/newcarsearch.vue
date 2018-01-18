@@ -34,8 +34,8 @@
         </select>
       </div>
       <div class="choose-select choose-select-paticulur" @click="screenCar()">
-          <div class="choose-again float_left" >筛选</div>
-          <div class="triangle-down float_right"></div>
+          <div class="choose-again" >筛选</div>
+          <div class="triangle-down"></div>
       </div>
       <div class="clear"></div>
       
@@ -123,8 +123,7 @@
     </div>
 
    <ul class="condition">
-      <li v-if="cond"><p>条件<span @click="conditions()">X</span></p></li>
-      <li v-if="cond"><p>条件<span @click="conditions()">X</span></p></li>
+      <li v-for="(newcardetail,index) in newcardetails" v-bind:key="newcardetail.text"  v-if="index"><p>{{newcardetail.text + index }}<span @click="newcardetailClick(index)">X</span></p></li>
   </ul>
 
 
@@ -150,8 +149,6 @@
       </li>
       </router-link>
     </ul>
-
-
 
   <div class="first-enter-pop-box" v-if="carIntentIf">
       <div class="first-enter-pop">
@@ -191,9 +188,6 @@
       </div>
   </div>
 
-
-
-
   </div>
 </template>
 
@@ -201,198 +195,222 @@
 export default {
   data() {
     return {
-      cond: true,
-      screenIf:false,
-      carIntentIf:true
+      index: true,
+      screenIf: false,
+      carIntentIf: true,
+      newcardetails: [
+        { text: "" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" }
+      ]
     };
   },
   methods: {
-    conditions: function () {
-      this.cond = false;
+    newcardetailClick: function(index) {
+      this.newcardetails.splice(index, 1);
     },
-    screenCar:function (){
-      if(this.screenIf==false){
-        this.screenIf=true;
-      }else{
-        this.screenIf=false
+    screenCar: function() {
+      if (this.screenIf == false) {
+        this.screenIf = true;
+      } else {
+        this.screenIf = false;
       }
     },
-    carIntent:function (){
-      this.carIntentIf=false
+    carIntent: function() {
+      this.carIntentIf = false;
     }
   },
   created() {
-    this.conditions;
+    this.newcardetailClick;
     this.screenCar;
   }
 };
 </script>
 
 <style scoped>
-@import url('../../../static/css/common.css');
+@import url("../../../static/css/common.css");
 
-.first-enter-pop-box{
-  width:100%;
-  padding:20px;
+.first-enter-pop-box {
+  width: 100%;
+  padding: 20px;
   position: absolute;
-  top:120px;
-  left:0;
+  top: 120px;
+  left: 0;
   border-radius: 5px;
 }
-.first-enter-pop{
-  width:100%;
-  border:1px solid rgba(235,97,0,1);
+.first-enter-pop {
+  width: 100%;
+  border: 1px solid rgba(235, 97, 0, 1);
   border-radius: 5px;
 }
-.pop-top{
-  width:100%;
+.pop-top {
+  width: 100%;
   line-height: 40px;
-  background:rgba(235,97,0,1);
-  color:white;
+  background: rgba(235, 97, 0, 1);
+  color: white;
   text-indent: 1em;
 }
-.choose-detail-two{
-  width:100%;
-  padding-left:20px;
-  padding-right:20px;
-  padding-bottom:20px;
-  background:white;
+.choose-detail-two {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background: white;
   z-index: 6666666666;
-  
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-
-.nav-search{
-  width:100%;
+.nav-search {
+  width: 100%;
   line-height: 44px;
   background: white;
-  padding-left:10px;
+  padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
-.nav-search img{
-  width:10px;
+.nav-search img {
+  width: 10px;
 }
-.nav-search-input{
-  width:70%;
+.nav-search-input {
+  width: 70%;
 }
-.nav-search-new{
-  width:20%;
-  color:#666;
-  font-size:15px;
+.nav-search-new {
+  width: 20%;
+  color: #666;
+  font-size: 15px;
 }
-.nav-search-input{
+.nav-search-input {
   position: relative;
 }
-.nav-search-input input{
-  width:100%;
-  height:30px;
-  border:1px solid rgba(128,128,128,1);
+.nav-search-input input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(128, 128, 128, 1);
   border-radius: 5px;
-  text-indent: 2em; 
+  text-indent: 2em;
 }
-.nav-search-input img{
-  width:16px;
-  position:absolute;
-  top:14px;
-  left:4px;
+.nav-search-input img {
+  width: 16px;
+  position: absolute;
+  top: 14px;
+  left: 4px;
 }
 
-.choose-select-box{
-  width:100%;
+.choose-select-box {
+  width: 100%;
   height: 44px;
-  background:white;
+  background: white;
   position: relative;
 }
-.choose-select{
+.choose-select {
   text-align: center;
-  width:25%;
+  width: 25%;
   line-height: 44px;
   float: left;
   position: relative;
 }
-.choose-select select{
+.choose-select select {
   border: none;
 }
-.choose-again{
-  font-size:13px;
-  color:#333;
+.choose-again {
+  font-size: 13px;
+  color: #333;
+}
+.choose-select>div{
+  display: inline-block;
 }
 .triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 6px solid #333;
-    margin-top:19px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 6px solid #333;
+  margin-left: 2px;
 }
-.choose-select-paticulur{
-  padding-left:15px;
-  padding-right:15px;
+.choose-select-paticulur {
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.choose-detail{
-  width:100%;
-  padding:10px 20px;
+.choose-detail {
+  width: 100%;
+  padding: 10px 20px;
   background: white;
-  position:absolute;
-  top:46px;
+  position: absolute;
+  top: 48px;
   left: 0px;
   z-index: 666666;
 }
-.choose-one{
-  width:100%;
+.choose-one {
+  width: 100%;
   line-height: 50px;
   border-bottom: 1px solid #e1e1e1;
 }
-.choose-one select{
-  border:none;
-  color:#666;
-  font-size:12px;
+.choose-one select {
+  border: none;
+  color: #666;
+  font-size: 12px;
+  padding: 0 10px;
 }
-.choose-main{
-  font-size:15px;
-  color:#666;
+.choose-main {
+  font-size: 15px;
+  color: #666;
 }
-.choose-btn{
-  width:60%;
+.choose-btn {
+  width: 60%;
   line-height: 40px;
-  margin:0 auto;
-  background: rgba(231,148,60,1);
-  color:white;
+  margin: 0 auto;
+  background: rgba(231, 148, 60, 1);
+  color: white;
   text-align: center;
   border-radius: 5px;
-  margin-top:10px;
+  margin-top: 10px;
 }
-
-
 
 .condition {
   width: 100%;
   font-size: 0px;
 }
-.condition li:first-child {
-  margin-left: 10px;
-}
 .condition li {
+  width:  calc( 100% / 5  - 10px );
   display: inline-block;
   border: 0.5px solid rgba(153, 153, 153, 1);
-  padding: 0 7px;
-  height: 20px;
+  padding: 0 0px 0 3px;
   background-color: white;
-  margin: 5px 5px 5px 0;
+  margin: 2.5px 5px;
+  
+}
+.condition li:first-child{
+  margin-top: 5px;
+}
+.condition li:last-child{
+   margin-bottom: 5px;
+}
+.condition li p{
+  position: relative;
 }
 .condition li p,
 .condition li p span {
   font-size: 10px;
-  line-height: 17px;
+  text-align: left;
   color: rgba(132, 132, 132, 1);
+  line-height: 20px;
 }
 .condition li p span {
   display: inline-block;
-  padding-left: 8px;
   cursor: pointer;
+  position: absolute;
+  right: 3px;
 }
-
 
 .car-all {
   background-color: white;

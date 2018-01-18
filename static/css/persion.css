@@ -68,6 +68,7 @@
 .user-order .car-img{
     width: 90px;
     height: 90px;
+    overflow: hidden;
     vertical-align: middle;
 }
 .user-order .car-img img{

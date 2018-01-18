@@ -1,7 +1,7 @@
 <template>
   <div>
-      <mt-header class="border-bottom" title="我的好友">
-              <router-link to="#" slot="left">
+      <mt-header class="border-bottom" title="好友详情">
+              <router-link to="/myfriend" slot="left">
                    <mt-button icon="back"></mt-button>
            </router-link>
           </mt-header>
@@ -13,7 +13,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <span>我</span>
@@ -23,9 +23,6 @@
                         <p>推荐人 : 赵桐</p>
                         <p>推荐数<span>16</span>人</p>
                     </div>
-                </div>
-                <div class="myfriend-list-nature-right">
-                    <img src="../../../static/img/go-back.png" alt="">
                 </div>
             </div> 
           </div>
@@ -44,7 +41,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <!-- <span>我</span>
@@ -54,9 +51,6 @@
                         <p>推荐人 : 赵桐</p>
                         <p>推荐数<span>16</span>人</p>
                     </div>
-                </div>
-                <div class="myfriend-list-nature-right">
-                    <img src="../../../static/img/go-back.png" alt="">
                 </div>
             </div> 
           </div>
@@ -75,7 +69,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <!-- <span>我</span>
@@ -85,9 +79,6 @@
                         <p>推荐人 : 赵桐</p>
                         <p>推荐数<span>16</span>人</p>
                     </div>
-                </div>
-                <div class="myfriend-list-nature-right">
-                    <img src="../../../static/img/go-back.png" alt="">
                 </div>
             </div> 
           </div>
@@ -106,7 +97,7 @@
             <div class="myfriend-list-right">
                 <div class="clearfix">
                     <div class="myfriend-list-id">
-                         <p class="text-size15">赵桐<span class="text-size12">&nbsp ID:123456</span></p>
+                         <p class="text-size15">赵桐<span class="text-size12"> ID:123456</span></p>
                     </div>
                     <div class="myfriend-list-nature">
                         <!-- <span>我</span>
@@ -116,9 +107,6 @@
                         <p>推荐人 : 赵桐</p>
                         <p>推荐数<span>16</span>人</p>
                     </div>
-                </div>
-                <div class="myfriend-list-nature-right">
-                    <img src="../../../static/img/go-back.png" alt="">
                 </div>
             </div> 
           </div>

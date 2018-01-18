@@ -1,92 +1,126 @@
 <template>
-  <div class="position">
-    <div class="search-car clearfix">
-      <router-link to="/usedcar"><div class="search-car-go"><img src="../../../static/img/go-back-left.png" alt=""></div></router-link>
-      <div class="search-car-input clearfix"><img src="../../../static/img/search.png" alt=""><input type="text" placeholder="搜索"></div>
-      <div class="Reset">重置</div>
-    </div>
-    <ul class="condition">
-      <li v-if="cond"><p>条件<span @click="conditions()">X</span></p></li>
-      <li v-if="cond"><p>条件<span @click="conditions()">X</span></p></li>
-    </ul>
-    <div class="screen-car">
-      <select name="" id="">
-        <option value="">默认排序</option>
-        <option value="">热门车型</option>
-      </select>
-      <select name="" id="">
-        <option value="">品牌</option>
-        <option value="">奥迪</option>
-        <option value="">大众</option>
-      </select>
-      <select name="" id="">
-        <option value="">价格</option>
-        <option value="">3万以下</option>
-        <option value="">3万-5万</option>
-        <option value="">5万-8万</option>
-        <option value="">8万-15万</option>
-      </select>
-      <div style="width:25%; float:right;" class="text-center">
-      <p @click="screenCar()"><span class="text-size13">筛选</span><i class="el-icon-caret-bottom"></i></p>
+  <div>
+    <div class="nav-search">
+      <router-link to="/car"><div class="float_left">
+        <img src="../../../static/img/go-back-left.png"/>
+      </div></router-link>
+      <div class="float_right nav-search-used">重置</div>
+      <div class="float_right nav-search-input">
+        <input placeholder="搜索"/>
+        <img src="../../../static/img/search.png"/>
       </div>
-      <div v-if="screenIf" class="screen-down  clearfix">
-        <div>
-              <p>品牌</p> 
-              <select name="" id="">
-                <option value="" selected = "selected">品牌</option>
-                <option value="">奥迪</option>
-                <option value="">金杯</option>
-                <option value="">大众</option>
+      <div class="clear"></div>
+    </div>
+
+    <div class="choose-select-box">
+            <div class="choose-select">
+              <select>
+                <option>默认排序</option>
+                <option>热门车型</option>
               </select>
-            <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
-        </div>
-        <div>
-          <p>级别</p> 
-          <select name="" id="">
-          <option value="">不限</option>
-          <option value="">微型</option>
-          <option value="">小车</option>
-          <option value="">紧凑型</option>
-          <option value="">中型型</option>
-          <option value="">SUV</option>
-        </select>
-        <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
-        </div>
-        <div>
-          <p>价格</p> 
-          <select name="" id="">
-          <option value="">不限</option>
-          <option value="">3万以下</option>
-          <option value="">3万-5万</option>
-          <option value="">5万-8万</option>
-          <option value="">8万-15万</option>
-        </select>
-        <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
-        </div>
-        <div>
-          <p>变速箱</p> 
-          <select name="" id="">
-          <option value="">不限</option>
-          <option value="">自动</option>
-          <option value="">手动</option>
-        </select>
-        <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
-        </div>
-        <div>
-          <p>排量</p> 
-          <select name="" id="">
-          <option value="">不限</option>
-          <option value="">1L及以下</option>
-          <option value="">1.1L~1.6L</option>
-          <option value="">1.7L~2.0L</option>
-        </select>
-        <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
-        </div>
-        <div class="search-screen">搜索</div>
-      </div>
+            </div>
+            <div class="choose-select">
+              <select>
+                <option>品牌</option>
+                <option>奥迪</option>
+                <option>大众</option>
+              </select>
+            </div>
+            <div class="choose-select">
+              <select>
+                <option>价格</option>
+                <option>3万以下</option>
+                <option>3万以上</option>
+              </select>
+            </div>
+            <div class="choose-select choose-select-paticulur" @click="screenCar()">
+                <div class="choose-again">筛选</div>
+                <div class="triangle-down"></div>
+            </div>
+            <div class="choose-detail" v-if="screenIf">
+                <div class="choose-one">
+                    <div class="float_left choose-main">品牌</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">品牌</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">级别</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">价格</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">变速箱</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">排量</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">车身颜色</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">驱动形式</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">排放标准</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-btn">搜索</div>
+            </div>
     </div>
+
+   <ul class="condition">
+      <li v-for="(usedcardetail,index) in usedcardetails" v-bind:key="usedcardetail.text"  v-if="index"><p>{{usedcardetail.text + index }}<span @click="usedcardetailClick(index)">X</span></p></li>
+  </ul>
+
+
     <ul class="car-all clearfix">
-      <router-link to="/usercardetail">
+      <router-link to="/usedcardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -96,7 +130,7 @@
         </div>
       </li>
       </router-link>
-      <router-link to="/usercardetail">
+      <router-link to="/usedcardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -107,19 +141,45 @@
       </li>
       </router-link>
     </ul>
-    
-      <div class="car-intent" v-if="carIntentIf">
-        <div class="clearfix"><h3 class="line-block float_left">二手车意向</h3><span class="line-block float_right" @click="carIntent()">X</span></div>
-        <div>
-          <p>变速箱</p> 
-          <select name="" id="">
-          <option value="">不限</option>
-          <option value="">自动</option>
-          <option value="">手动</option>
-        </select>
-        <div style="border:1px solid #dbdbdb; height:0px;padding:0;margin:0 10%;"></div>
+
+    <div class="first-enter-pop-box" v-if="carIntentIf">
+        <div class="first-enter-pop">
+          <div class="pop-top">
+            <span>二手车</span>
+            <span class="float_right" style="margin-right:20px;" @click="carIntent()">X</span>
+          </div>
+          <div class="choose-detail-two">
+                <div class="choose-one">
+                    <div class="float_left choose-main">品牌</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">品牌</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">级别</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="choose-one">
+                    <div class="float_left choose-main">价格</div>
+                    <div class="float_right">
+                      <select>
+                        <option value="">不限</option>
+                      </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+
   </div>
 </template>
 
@@ -127,202 +187,223 @@
 export default {
   data() {
     return {
-      cond: true,
-      screenIf:false,
-      carIntentIf:true
+      index: true,
+      screenIf: false,
+      carIntentIf: true,
+      usedcardetails: [
+        { text: "" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" },
+        { text: "条件" }
+      ]
     };
   },
   methods: {
-    conditions: function () {
-      this.cond = false;
+    usedcardetailClick: function(index) {
+      this.usedcardetails.splice(index, 1);
     },
-    screenCar:function (){
-      if(this.screenIf==false){
-        this.screenIf=true;
-      }else{
-        this.screenIf=false
+    screenCar: function() {
+      if (this.screenIf == false) {
+        this.screenIf = true;
+      } else {
+        this.screenIf = false;
       }
     },
-    carIntent:function (){
-      this.carIntentIf=false
+    carIntent: function() {
+      this.carIntentIf = false;
     }
   },
   created() {
-    this.conditions;
+    this.usedcardetailClick;
     this.screenCar;
   }
 };
 </script>
 
 <style scoped>
-* {
-  margin: 0px;
-  padding: 0px;
-}
-option{
-  font-size: 13px;
-  border: none !important;
-}
-.car-intent{
-  width: 80%;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid #F5B07F;
-  box-sizing: border-box;
-  border-radius: 8px;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
-.car-intent div:first-child{
-  background-color: #EB6100;
-  padding: 10px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  color: white;
-}
-.car-intent div:nth-of-type(2){
-  padding: 10px;
-}
-.car-intent div select{
-  float: right;
-  width: 25%;
-  border: none;
-  margin: 15px 0px;
-}
-.car-intent div p{
-  display: inline-block;
-  padding: 15px 0;
-}
-.filter-drop-down {
+@import url("../../../static/css/common.css");
+
+.first-enter-pop-box {
   width: 100%;
-  background-color: rgb(255, 255, 255) !important;
-  left: 0px !important;
+  padding: 20px;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  border-radius: 5px;
 }
+.first-enter-pop {
+  width: 100%;
+  border: 1px solid rgba(235, 97, 0, 1);
+  border-radius: 5px;
+}
+.pop-top {
+  width: 100%;
+  line-height: 40px;
+  background: rgba(235, 97, 0, 1);
+  color: white;
+  text-indent: 1em;
+}
+.choose-detail-two {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background: white;
+  z-index: 6666666666;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.nav-search {
+  width: 100%;
+  line-height: 44px;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+.nav-search img {
+  width: 10px;
+}
+.nav-search-input {
+  width: 70%;
+}
+.nav-search-used {
+  width: 20%;
+  color: #666;
+  font-size: 15px;
+}
+.nav-search-input {
+  position: relative;
+}
+.nav-search-input input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 5px;
+  text-indent: 2em;
+}
+.nav-search-input img {
+  width: 16px;
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+
+.choose-select-box {
+  width: 100%;
+  height: 44px;
+  background: white;
+  position: relative;
+}
+.choose-select {
+  text-align: center;
+  width: 25%;
+  line-height: 44px;
+  float: left;
+  position: relative;
+}
+.choose-select select {
+  border: none;
+}
+.choose-again {
+  font-size: 13px;
+  color: #333;
+}
+.choose-select>div{
+  display: inline-block;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 6px solid #333;
+  margin-left: 2px;
+}
+.choose-select-paticulur {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.choose-detail {
+  width: 100%;
+  padding: 10px 20px;
+  background: white;
+  position: absolute;
+  top: 48px;
+  left: 0px;
+  z-index: 666666;
+}
+.choose-one {
+  width: 100%;
+  line-height: 50px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.choose-one select {
+  border: none;
+  color: #666;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.choose-main {
+  font-size: 15px;
+  color: #666;
+}
+.choose-btn {
+  width: 60%;
+  line-height: 40px;
+  margin: 0 auto;
+  background: rgba(231, 148, 60, 1);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 .condition {
   width: 100%;
   font-size: 0px;
 }
-.condition li:first-child {
-  margin-left: 10px;
-}
 .condition li {
+  width:  calc( 100% / 5  - 10px );
   display: inline-block;
   border: 0.5px solid rgba(153, 153, 153, 1);
-  padding: 0 7px;
-  height: 20px;
+  padding: 0 0px 0 3px;
   background-color: white;
-  margin: 5px 5px 5px 0;
+  margin: 2.5px 5px;
+  
+}
+.condition li:first-child{
+  margin-top: 5px;
+}
+.condition li:last-child{
+   margin-bottom: 5px;
+}
+.condition li p{
+  position: relative;
 }
 .condition li p,
 .condition li p span {
   font-size: 10px;
-  line-height: 17px;
+  text-align: left;
   color: rgba(132, 132, 132, 1);
+  line-height: 20px;
 }
 .condition li p span {
   display: inline-block;
-  padding-left: 8px;
   cursor: pointer;
-}
-.screen-car {
-  padding: 9px 3px;
-  background-color: white;
-  font-size: 0px;
-  position: relative;
-}
-.screen-down{
-  width: 100%;
   position: absolute;
-  top: 40px;
-  left: 0px;
-  z-index: 9999;
-  background-color: white;
+  right: 3px;
 }
-.screen-down>div{
-  width: 90%;
-  height:60px;
-  margin: 0 auto;
-}
-.screen-down div p{
-  display: inline-block;
-  padding: 15px 0;
-}
-.screen-down div select{
-  float: right;
-  width: 25%;
-  border: none;
-  margin: 15px 0px;
-}
-.screen-car>select{
-  width: 25%;
-  text-align: center;
-  font-size: 13px;
-  border: 1px solid rgb(255, 255, 255);
-}
-.search-screen{
-  text-align: center;
-  background-color: rgba(231,148,60,1);
-  padding: 10px 0px;
-  width: 60% !important;
-  margin: 20px auto !important;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid #BBBBBB;
-}
-.el-col{
-  float: right;
-  text-align: center;
-}
-.el-col span {
-  font-size: 13px;
-}
-.el-dropdown-menu{
-  width: 100%;
-  background-color: aqua;
-  left: 0px !important;
-}
-.search-car {
-  text-align: center;
-  padding: 7px 10px 2px 10px;
-  background-color: white;
-}
-.search-car>div {
-  display: inline-block;
-}
-.search-car-go {
-  float: left;
-  width: 11.5px;
-}
-.search-car-go img {
-  padding: 5px 0px;
-  width: 100%;
-  /* vertical-align: middle;  */
-}
-.search-car-input {
-  border: 0.5px solid rgba(128, 128, 128, 1);
-  width: calc(100% - 11.5px - 80px);
-  padding: 3px;
-  border-radius: 8px;
-}
-.search-car-input img {
-  float: left;
-  width: 19.5px;
-  /* vertical-align:middle; */
-}
-.search-car-input input {
-  float: left;
-  width: calc(100% - 36px);
-  border: none;
-  padding: 0px 8px;
-}
-.Reset {
-  width: 35px;
-  float: right;
-  font-size: 15px;
-  line-height: 25px;
-  color: rgba(102, 102, 102, 1);
-}
+
 .car-all {
   background-color: white;
 }

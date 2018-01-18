@@ -17,7 +17,7 @@
                 </div>
               </div>
           </router-link>
-          <p class="peccancy">违章查询</p>
+          <router-link to="/break"><p class="peccancy">违章查询</p></router-link>
         </li>
         <li class="clearfix">
           <router-link to="/newcardetail">
@@ -30,10 +30,10 @@
                 </div>
               </div>
           </router-link>
-          <p class="peccancy">违章查询</p>
+          <router-link to="/break"><p class="peccancy">违章查询</p></router-link>
         </li>
     </ul>
-    <div class="add-cars"><button>添加车辆</button></div>
+    <router-link to="/addcar"><div class="add-cars"><button>添加车辆</button></div></router-link>
   </div>
 </template>
 

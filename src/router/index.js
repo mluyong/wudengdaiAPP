@@ -57,6 +57,9 @@ import FriendDetail from '../page/personal/frienddetail.vue';
 import MyFriend from '../page/personal/myfriend.vue';
 import MyCarHouse from '../page/personal/mycarhouse.vue';
 import Integralcenter from '../page/personal/integralcenter.vue';
+import Break from '../page/personal/break.vue';
+import License from '../page/personal/license.vue';
+import AddCar from '../page/personal/addcar.vue';
 
 import Share from '../page/Share/share.vue';
 
@@ -155,5 +158,11 @@ export default new Router({
     {path: '/mycarhouse',name: 'MyCarHouse',component: MyCarHouse}, 
     // 积分中心
     {path: '/integralcenter',name: 'Integralcenter',component: Integralcenter},
+    //违章查询
+    {path: '/break',name: 'Break',component: Break},
+    //驾照查询
+    {path: '/license',name: 'License',component: License},
+    //添加车辆
+    {path: '/addcar',name: 'AddCar',component: AddCar},
   ]
 })

@@ -10,8 +10,14 @@
        <router-view></router-view>
  </div>
 
+
+
        <div class="car-top-img">
-           <img src="../../../static/img/4.jpg" alt="">
+           <mt-swipe :auto="4000">
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+            <mt-swipe-item><img src="../../../static/img/choosecar.png" /></mt-swipe-item>
+          </mt-swipe>
        </div>
 
       <div class="opintion text-center">
@@ -176,7 +182,6 @@ export default {
 }
 .car-top-img img{
     width:100%;
-    height: 100%;
 }
 
 .opintion,.buycar,.car-all,.jb,.dz{

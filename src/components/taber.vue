@@ -46,7 +46,7 @@ export default {
       this.isSelect = title;
       switch (title) {
         case "主页":
-          this.$router.push("/");
+          this.$router.push("/home");
           break;
         case "选车":
           this.$router.push("/car");

@@ -13,41 +13,47 @@
 	</div>
 	<div class="clearfix welfare text-center">
 		<div class="welfare-left float_left">
+			<router-link to="/integralcenter">
 			<img class="left-img" src="../../../static/img/integral.png" alt="">
 			<span> 积分：500 </span>
+			</router-link>
 		</div>
+		
 		<div class="welfare-right float_right">
+			<router-link to="/myvalue">
 			<img class="right-img" src="../../../static/img/coupon.png" alt="">
 			<span> 优惠劵：
 				<span class="color"> 1 </span>
 			</span>
+			</router-link>
 		</div>
+		
 	</div>
 	<div class="demand text-center">
 		<ul>
 			<li>
-				<a href="">
+				<router-link to="/break">
 					<img class="wzcx" src="../../../static/img/wzcx.png" alt="">
 					<p>违章查询</p>
-				</a>
+				</router-link>
 			</li>
 			<li>
-				<a href="">
+				<router-link to="/license">
 					<img class="jzcf" src="../../../static/img/jzcf.png" alt="">
 					<p>驾照查询</p>
-				</a>
+				</router-link>
 			</li>
 			<li>
-				<a href="">
+				<router-link to="/newcarsearch">
 					<img class="wymc" src="../../../static/img/wymc.png" alt="">
 					<p>我要买车</p>
-				</a>
+				</router-link>
 			</li>
 			<li>
-				<a href="">
+				<router-link to="/carassess">
 					<img class="acpg" src="../../../static/img/acpg.png" alt="">
 					<p>爱车评估</p>
-				</a>
+				</router-link>
 			</li>
 		</ul>
 	</div>

@@ -99,58 +99,8 @@ export default {
 <style scoped>
 @import url("../../../static/css/common.css");
 @import url("../../../static/css/cardetail.css");
-.value-box{
-    width:100%;
-    position: absolute;
-    top:200px;
-    left:0;
-}
-.value-nav{
-    width: 100%;
-    line-height: 40px;
-    background: #E07E70;
-    color:white;
-    text-align: center;
-}
-.value-detail-box{
-   width: 100%;
-   padding:20px;
-   background:white;
-}
-.value-detail{
-    width:100%;
-    position: relative;
-}
-.value-detail img{
-    width:100%;
-    margin-bottom: 10px;
-}
-.value-detail-menoy{
-    width:100%; 
-    text-align: center;
-    position: absolute;
-    top:20px;
-    left:0;
-    
-}
-.value-date{
-    width:100%;
-    text-align:center;
-    position: absolute;
-    top:70px;
-    left:0;
-    
-}
-.value-date div{
-    font-size:12px;
-    color:white;
-}
-.color-yeelow{
-    color:rgba(251,210,45,1)
-}
-.color-white{
-    color: white;
-}
+
+
 
 .insurance-img{
     width:100%;
