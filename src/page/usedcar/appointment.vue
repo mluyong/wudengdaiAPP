@@ -26,7 +26,6 @@ import { DatetimePicker } from 'mint-ui';
 export default {
   data() {
     return {
-      ele: "&nbsp",
       popupVisible:"5555"
     };
   },

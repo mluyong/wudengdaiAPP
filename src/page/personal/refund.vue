@@ -77,15 +77,15 @@
 
     <div class="height_47"></div>
     <div class="bottom_pay">
-       <div class="float_left">
-           <div class="online_img"><img src="../../../static/img/online.png"/></div>
-           <div class="online_word">网上咨询</div>
-      </div>
+      
       <div class="text-right line_height_47">
+              <span>
+             <span class="small_word">订金：</span>
+             <span class="normal_word">￥</span>
+             <span class="normal_word">1000</span>
+           </span>
            
-           
-              <router-link to="/refund"><button class="pay_btn_small">申请退款</button></router-link>
-              <button class="pay_btn_small">确认收货</button>
+        <button class="pay_btn_small">申请退款</button>
          
            
       </div>

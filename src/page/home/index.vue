@@ -28,7 +28,7 @@
                    </router-link>
                </li>
                <li class="list">
-                 <router-link to="/"> 
+                 <router-link to="/break"> 
                    <span>
                        <img src="../../../static/img/zy.png" alt="">
                    </span>

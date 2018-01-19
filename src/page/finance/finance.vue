@@ -134,11 +134,7 @@
 
 <script>
 export default {
-    data(){
-        return{
-          ele: "&nbsp"  
-        }
-    }
+
 };
 </script>
 

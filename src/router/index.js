@@ -60,6 +60,8 @@ import Integralcenter from '../page/personal/integralcenter.vue';
 import Break from '../page/personal/break.vue';
 import License from '../page/personal/license.vue';
 import AddCar from '../page/personal/addcar.vue';
+import Refund from '../page/personal/refund.vue';
+import Logout from '../page/personal/logout.vue';
 
 import Share from '../page/Share/share.vue';
 
@@ -164,5 +166,9 @@ export default new Router({
     {path: '/license',name: 'License',component: License},
     //添加车辆
     {path: '/addcar',name: 'AddCar',component: AddCar},
+    //申请退款
+    {path: '/refund',name: 'Refund',component: Refund},
+    //退出登录
+    {path: '/logout',name: 'Logout',component: Logout},
   ]
 })

@@ -16,11 +16,11 @@
         <div class="carloan-detail-box">
               <ul class="carloan-detail">
                   <li>
-                      <div class="carloan-detail-div">
+                      <router-link to="/carloandetail"><div class="carloan-detail-div">
                         <div class="carloan-detail-img"><img src="../../../static/img/jtyh.jpg"/></div>
                         <div class="carloan-detail-word">首付<span class="text-size14 color-red">20%</span></div>
                         <div class="carloan-detail-word">两证一卡，审批快</div>
-                      </div>
+                      </div></router-link>
                   </li>
                    <li>
                       <div class="carloan-detail-div">

@@ -5,7 +5,7 @@
         <li><p class="active-two">选车</p></li> 
         <li><router-link to="/usedcar"><p>二手车</p> </router-link></li>
         <li><router-link to="/finance"><p>金融</p></router-link></li> 
-        <li><img src="../../../static/img/search.png" alt=""></li>
+        <li><router-link to="/search"><img src="../../../static/img/search.png" alt=""></router-link></li>
       </ul> 
        <router-view></router-view>
  </div>

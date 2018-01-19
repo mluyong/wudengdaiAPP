@@ -201,16 +201,8 @@ export default {
       newcardetails: [
         { text: "" },
         { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" }
+        { text: "条件2" },
+        
       ]
     };
   },

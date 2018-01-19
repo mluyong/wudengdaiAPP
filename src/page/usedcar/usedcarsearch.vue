@@ -120,7 +120,7 @@
 
 
     <ul class="car-all clearfix">
-      <router-link to="/usedcardetail">
+      <router-link to="/usercardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -130,7 +130,7 @@
         </div>
       </li>
       </router-link>
-      <router-link to="/usedcardetail">
+      <router-link to="/usercardetail">
       <li class="clearfix">
         <div class="float_left"><img src="../../../static/img/dzbl.jpg" alt=""></div>
         <div>
@@ -193,16 +193,8 @@ export default {
       usedcardetails: [
         { text: "" },
         { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" },
-        { text: "条件" }
+        { text: "条件4" },
+        
       ]
     };
   },

@@ -148,9 +148,7 @@
 
 <script>
 export default {
-  data() {
-    el: "&nbsp";
-  }
+ 
 };
 </script>
 

@@ -9,7 +9,7 @@
 		</div>
 		<p class="user-user">用户名</p>
 		<p class="user-id">ID 165586 </p>
-		<div class="user-setup"></div>
+		<router-link to="/logout"><div class="user-setup"></div></router-link>
 	</div>
 	<div class="clearfix welfare text-center">
 		<div class="welfare-left float_left">
@@ -132,9 +132,7 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  
  
 };
 </script>

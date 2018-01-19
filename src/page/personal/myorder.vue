@@ -29,7 +29,7 @@
                     <p class="text-size12 line-height20">尊享价：7.92万</p>
                     <div class="clearfix text-size padding-top15">
                         <p class="float_left text-size12 color-red">支付金额：1000（定金）</p>
-                        <div class="refund float_right">申请退款</div>
+                        <router-link to="/refund"><div class="refund float_right">申请退款</div></router-link>
                     </div>
                 </div>
             </div>

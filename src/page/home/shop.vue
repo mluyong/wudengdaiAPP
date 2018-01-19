@@ -76,12 +76,8 @@ export default {
   data() {
     return {};
   },
-  methods: {
-   
-  },
-  created() {
-    beforeCreate()
-  }
+
+
 };
 </script>
 

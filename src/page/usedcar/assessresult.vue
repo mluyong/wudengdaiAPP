@@ -8,42 +8,24 @@
       <div class="car-category">
           <h3 class="text-size15">汽车品牌名称</h3>
           <p class="text-size12 color66">城市/上牌年份/行驶里程</p>
-          <div class="price">
-             <ul class="text-size text-center">
-                 <li class="line-block text-size15">
-                     车商收购价
-                 </li>
-                 <li class="line-block text-size15">
+          <div class="price text-center">
+             <ul>
+                 <li class="text-size15">
                      个人交易价格
                  </li>
-                 <li class="line-block text-size15">
-                      车商出售价
+                 <li class="">
+                     <span class="text-size21 color-red">￥13</span>
+                     <span class="color51">万</span>
                  </li>
+                 <div class="clear"></div>
              </ul>
           </div>
-          <div class="car-detail">
-             <ul class="text-size">
-                 <li class="line-block text-size15 text-center">
-                   <span>￥</span>
-                   <span>12.3</span>
-                   <span class="color51 text-size13">万</span></li>
-                 <li class="line-block text-size15 text-center">
-                   <span>￥</span>
-                   <span>12.3</span>
-                   <span class="color51 text-size13">万</span>
-                 </li>
-                 <li class="line-block text-size15 text-center">
-                   <span>￥</span>
-                   <span>12.3</span>
-                   <span class="color51 text-size13">万</span>
-                 </li>
-             </ul>
-          </div>
+          <div class="owntop">以上信息仅供参考</div>
       </div>
      
-     <div class="car-category margin-top5">
-           <h3 class="text-size15">汽车品牌名称</h3>
-           <p class="text-size12 color66">城市/上牌年份/行驶里程</p>
+     <div class="car-category margin-top-6 ">
+           <h3 class="text-size15">预约线下评估</h3>
+           <p class="text-size12 color66">评估更精准</p>
             <ul class="text-size">
                 <li class="bespeak">网上预约</li>
                 <li class="bespeak margin-right0">直接联系</li>
@@ -67,9 +49,14 @@ export default {
 
 <style scoped>
 @import url('../../../static/css/common.css');
-
+ul,li{
+  list-style: none;
+}
 .color66{
   color:#666;
+}
+.margin-top-6{
+  margin-top:6px;
 }
 .car-category {
   background-color: #ffffff;
@@ -81,30 +68,22 @@ h3 {
 }
 .price {
   width: 100%;
+  height: 48px;
   border: 1px solid #e7943c;
   margin-top: 20px;
   border-radius: 6px;
 }
 .price li {
-  width: calc(100% / 3 - 2px);
-  padding: 12.5px 0px;
+  width: 50%;
+  line-height: 46px;
+  float: left;
   color: #e7943c;
 }
-.price li:nth-child(2) {
+.price li:nth-child(1) {
   background-color: #e7943c;
   color: #ffffff;
 }
-.car-detail {
-  padding-top: 14px;
-}
-.car-detail ul li {
-  width: calc(100% / 3 - 2px);
-}
-.car-detail ul li span {
-  font-size: 21px;
-  color: #ff0000;
-  font-weight: 600;
-}
+
 .bespeak {
   width: calc(100% / 2 - 15px);
   display: inline-block;
@@ -120,5 +99,16 @@ h3 {
 }
 .color51{
   color:#333 !important;
+}
+.text-size21{
+  font-size:21px;
+  font-weight: bold;
+}
+.owntop{
+  width:100%;
+  text-align: right;
+  font-size:12px;
+  color:#666;
+  line-height: 26px;
 }
 </style>
