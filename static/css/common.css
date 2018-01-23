@@ -165,7 +165,7 @@ border-bottom: 1px solid #DBDBDB;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
     height: 44px;
     line-height: 1;
     padding: 0 10px;
@@ -176,9 +176,7 @@ border-bottom: 1px solid #DBDBDB;
   }
 
   /*咨询详情头部  */
-  .mint-header{
-    background-color: #FFFFFF;
-}
+
   .mint-header-title{
     font-size: 18px;
     line-height: 20px;
@@ -455,9 +453,51 @@ div.v-modal{
     background: #000;
     }
 /* element的select去掉border */
-    .el-input__inner{
-        border:none !important;
-      }
-      .el-select-dropdown__item{
-          padding:0 10px;
-      }
+.el-input__inner{
+    border:none !important;
+}
+.el-select-dropdown__item{
+    padding:0 10px;
+}
+
+/* 上拉加载的样式 */
+.tab-icon{
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background-color: #c5c5d2;
+    border-radius: 4px;
+    border: 0px;
+}
+.loadmoreCon{
+    overflow: hidden;
+}
+.scroll{
+    overflow: scroll;
+}
+/* 上拉加载的样式 */
+
+
+
+.headerFixed{
+    width: 100%;
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    z-index: 99999999;
+    border-bottom: 1px solid #DBDBDB;
+    }
+    .navFixed{
+    margin-top: 44px;
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+    }
+    .margin-top44{
+    margin-top: 44px !important;
+    }
+    .margin-top88{
+    margin-top: 79px !important;
+    }

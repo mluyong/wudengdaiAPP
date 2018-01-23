@@ -1,9 +1,13 @@
 <template>
   <div>
-        <div class="share-nav">分享</div>
+        <div class="header-title-word">分享</div>
+        <div class="header-title-word-div"></div>
+
         <div class="share-img">
              <img src="../../../static/img/share.jpg"/>
         </div>
+
+
         <div class="share-btn-box">
              <mt-button size="normal" @click="normalClick()">邀请好友</mt-button>
         </div>
@@ -81,6 +85,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('../../../static/css/header.css');
 @import url('../../../static/css/common.css');
 .share-nav{
   width:100%;

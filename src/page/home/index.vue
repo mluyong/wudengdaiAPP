@@ -1,6 +1,8 @@
 <template>
   <div class="content">
-       <div class="title">勿等贷</div>
+       <div class="header-title-word">勿等贷</div>
+       <div class="header-title-word-div"></div>
+
        <div class="index-img">
          <mt-swipe :auto="4000">
             <mt-swipe-item><img src="../../../static/img/index.png" /></mt-swipe-item>
@@ -72,44 +74,27 @@
                 </li>
             </ul>
        </div>
-       <div class="article">
+
+   <div class="article">
              <div class="b-nav clearfix">
                <div class="left-list">
                  <p>最新资讯</p>
                  <p>第一时间了解最新汽车动态</p>
                </div>
-             <p class="right-list"><router-link to="/news/report">查看更多</router-link> </p>
-            </div> 
+             <p class="right-list"><router-link to="/report">查看更多</router-link> </p>
+            </div>
             <div>
-                <ul class="clearfix">
-                    <li class="clearfix">
-                      <router-link to="/newsDetail">
-                        <div class="list-left"> 
+               <ul class="clearfix">
+                    <li class="clearfix" v-for="i in getIndexNew" :key="i.newsID">
+                      <router-link :to="{ name:'NewsDetail', params: { newsID: i.newsID}}">
+                        <div class="list-left">
                             <img src="../../../static/img/xhs.jpg"  alt="">
                         </div>
                         <div class="list-right">
-                            <p><span>[最新资讯]</span> 金杯新海狮2018款将于1月3号荣耀登场，全新架...</p>
-                            <p>1200阅读量</p>
+                            <p><span>[最新资讯]</span> {{i.Title}}</p>
+                            <p>{{i.Visit}}阅读量</p>
                         </div>
                         </router-link>
-                    </li>
-                    <li class="clearfix">
-                         <div  class="list-left">
-                            <img src="../../../static/img/dzbl.jpg" style="width:80px;height:60px" alt="">
-                        </div>
-                        <div class="list-right">
-                            <p><span>[最新资讯]</span> 同样挣3000元的汽修工 国内外的差距为何如此之大</p>
-                            <p>3600阅读量</p>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                         <div class="list-left">
-                            <img src="../../../static/img/dzbl.jpg" style="width:80px;height:60px" alt="">
-                        </div>
-                        <div class="list-right">
-                            <p><span>[最新资讯]</span> 庆元旦，买车大优惠，到店立领1000元优惠券</p>
-                            <p>16000阅读量</p>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -120,11 +105,35 @@
 
 <script>
 export default {
+  data(){
+    return{
+      //最新资讯
+      getIndexNew:""
+    }
+  },
+  methods:{
+  //最新资讯接口调用的方法
+  getIndexNews:function () {
+      this.$http.get("http://wddapi.jiechikeji.com/api/news?PageIndex=1&PageSize=3&newsTypeID=1").then(
+        data=>{
+          this.getIndexNew = data.body.Data.Data;
+        },
+        err=>{
+          console.log(err)
+        }
+      )
+    },
+  },
+  created() {
+    //加载时执行最新资讯方法
+    this.getIndexNews()
+  }
  
 };
 </script>
 
 <style scoped>
+@import url('../../../static/css/header.css');
 @import url('../../../static/css/common.css');
 .content {
   background-color: white;
@@ -133,13 +142,7 @@ export default {
 a {
   text-decoration: none;
 }
-.title {
-  height: 45px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 44px;
-  font-weight: 500;
-}
+
 .index-img{
   width: 100%;
   height: 187px;
@@ -255,6 +258,7 @@ a {
   float: left;
   padding: 0 0 0 5px;
   position: relative;
+  overflow: hidden;
 }
 .article li img {
   width: 100%;

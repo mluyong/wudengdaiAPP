@@ -37,10 +37,13 @@ export default {
       ]
     };
   } ,
-  methods: {
-    selectNav(title) {
-      this.isSelect = title; 
-    }
+  // computed:{
+  //   saleProducts(){
+  //     return this.$store.getters.saleProducts;
+  //   },
+  // },
+  created(){
+    this.saleProducts
   },
   methods: {
     selectNav(title) {

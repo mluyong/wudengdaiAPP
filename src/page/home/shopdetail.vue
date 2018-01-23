@@ -9,33 +9,19 @@
       <img src="../../../static/img/backgrounds.jpg" />
     </div> 
     <div class="padding_10 background_white margin-bottom-5">
-      <div class="nav-word margin-bottom-5">现代车载充电器</div>
+      <div class="nav-word margin-bottom-5">{{title}}</div>
       <div class="line-height-20">
         <img src="../../../static/img/integral.png" style="width:16px;margin-right:10px;"/>
-        <span class="font-size-16 color-r">800</span>
+        <span class="font-size-16 color-r">{{integral}}</span>
         <span>积分</span>
       </div>
-      <div class="line-height-20">市场参考价：98元</div>
+      <div class="line-height-20">市场参考价：<span>{{cost}}</span>元</div>
     </div>
 
     <div class="padding_10 background_white margin-bottom-5">
       <div class="line-height-20 margin-bottom-5">商品描述</div>
-      <div class="line-height-20">
-        <span>品名：</span>
-        <span>现代车载充电器</span>
-      </div>
-      <div class="line-height-20">
-        <span>品牌：</span>
-        <span>现代</span>
-      </div>
-      <div class="line-height-20">
-        <span>颜色：</span>
-        <span>黑色、银色、红色、蓝色</span>
-      </div>
-      <div class="line-height-20">
-        <span>型号：</span>
-        <span>SPS12</span>
-      </div>
+      <div class="product-detail">{{description}}</div>
+    
     </div>
 
 
@@ -49,7 +35,7 @@
       <div class="float_right line_height_47">
            <span>
              <span class="small_word">单价：</span>
-             <span class="normal_word">800</span>
+             <span class="normal_word">{{integral}}</span>
              <span class="small_word">积分</span>
            </span>
 
@@ -64,6 +50,34 @@
 
 <script>
 export default {
+  data(){
+    return{
+      IntegralProductID:"",
+      title:"",
+      integral:"",
+      cost:"",
+      description:""
+    }
+  },
+  created(){
+    this.IntegralProductID = this.$route.params.IntegralProductID;
+    this.$http
+      .get("http://192.168.2.178:53960/api/integralproduct?id="+this.IntegralProductID)
+      .then(
+        data => {
+           this.title = data.body.Data.Title;
+           this.integral = data.body.Data.Integral;
+           this.cost = data.body.Data.Cost;
+           this.description = data.body.Data.description;
+        },
+        err => {
+          console.log(err);
+        }
+      );
+  },
+  methods:{
+      
+  }
 
 }
 </script>
@@ -103,7 +117,14 @@ width: 100%
    color:red;
 }
 
+.product-detail{
+  width:100%;
+  height: auto;
+  font-size:12px;
+  color:#666;
+  word-wrap: break-word;
 
+}
 
 
 </style>

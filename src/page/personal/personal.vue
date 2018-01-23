@@ -1,8 +1,12 @@
 <template>
   <div>
-      <div class="text-center user-persion">
-		<p>个人中心</p>
-	</div>
+      <div class="header-title-word">个人中心</div>
+			<div class="header-title-word-div"></div>
+
+
+
+
+
 	<div class="user-header text-center">
 		<div class="user-img">
 			<img src="" alt="">
@@ -138,6 +142,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('../../../static/css/header.css');
 @import url("../../../static/css/persion.css");
 @import url("../../../static/css/common.css");
 * {

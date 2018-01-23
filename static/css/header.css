@@ -1,0 +1,56 @@
+/* 主页面的头部 */
+.header-title-word{
+    width:100%;
+    line-height: 44px;
+    font-size:16px;
+    background: white;
+    text-align: center;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:66666666666;
+    border-bottom: 1px solid #e1e1e1;
+}
+.header-title-word-div{
+    width:100%;
+    height:44px;
+}
+/* 选车页面下的选车、二手车、金融的css */
+.active-two{
+    border-bottom: 2px solid black;
+}
+.cartaber{
+    width:100%;
+    height:42px;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: white;
+    z-index: 5555555555555;
+}
+.cartaber ul{
+    font-size: 0px;
+    position: relative;
+}
+.cartaber ul li{
+    display: inline-block;
+    width: calc( 100% / 3.5 );
+    font-size: 15px;
+    text-align: center;
+}
+.cartaber ul li p{
+     padding: 10px 0px;
+}
+.cartaber ul li img{
+    width: 100%;
+    vertical-align: middle;
+}
+.cartaber ul li:last-child{
+    width: 20px !important;
+    position: absolute;top: 9px;
+    right: 10px;
+}
+.cartaber-div{
+    width:100%;
+    height:42px;
+}

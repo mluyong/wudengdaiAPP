@@ -8,19 +8,19 @@
         <div class="fundetail-title">
             <div class="fundetail-title-one clearfix">
                 <div class="fundetail-title-one-left float_left">
-                    <h4>中银转债<span>（163816）</span></h4>
-                    <p><span>风险评级</span><span>R2低风险</span></p> 
+                    <h4>中银转债<span>{{fundList.Code}}</span></h4>
+                    <p><span>风险评级</span><span>{{fundList.risk}}</span></p> 
                 </div>
-                <div class="fundetail-title-one-right float_right">债劵型</div>
+                <div class="fundetail-title-one-right float_right">{{fundList.TypeName}}</div>
             </div>
             <div class="fundetail-title-two">
                 <div class="fundetail-title-left">
                     <p>年收益率（%）</p>
-                    <h2>1.12</h2>
+                    <h2>{{fundList.Return0}}</h2>
                 </div>
                 <div class="fundetail-title-right">
                     <p>起购金额（￥）</p>
-                    <h2>1,000.00</h2>
+                    <h2>{{fundList.Starting}}</h2>
                 </div>
             </div>
         </div>
@@ -139,112 +139,128 @@
 export default {
   data() {
     return {
-      appointPop:false
+      appointPop: false,
+      fundList:""
     };
   },
-    methods: {
-       appointShow(){
-         this.appointPop = true;
-       },
-       appointHide(){
-         this.appointPop = false;
-       }
+  methods: {
+    appointShow() {
+      this.appointPop = true;
+    },
+    appointHide() {
+      this.appointPop = false;
+    },
+    FundDetail() {
+        var Fundid=this.$route.query.id;
+      this.$http.get("http://192.168.2.178:53960/api/Fund/"+Fundid).then(
+        data => {
+          this.fundList = data.body.Data;
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    }
   },
-}
+  created(){
+      this.FundDetail()
+  }
+};
 </script>
 
 <style scoped>
 @import url("../../../static/css/common.css");
-.fundetail-title,.fundetail-content{
-    background-color: white;
-    padding: 5px 10px;
+.fundetail-title,
+.fundetail-content {
+  background-color: white;
+  padding: 5px 10px;
 }
-.fundetail-title-one div:nth-of-type(2){
-    text-align: right;
+.fundetail-title-one div:nth-of-type(2) {
+  text-align: right;
 }
-.fundetail-title-one>div h4{
-    color: rgba(51,51,51,1);
-    font-size: 15px;
-    font-weight:500;
+.fundetail-title-one > div h4 {
+  color: rgba(51, 51, 51, 1);
+  font-size: 15px;
+  font-weight: 500;
 }
-.fundetail-title-one>div h4 span{
-    font-size: 13px;
-    color: rgba(77,77,77,1);
-    font-weight: normal;
+.fundetail-title-one > div h4 span {
+  font-size: 13px;
+  color: rgba(77, 77, 77, 1);
+  font-weight: normal;
 }
-.fundetail-title-one>div p span:last-child{
-    padding-right: 0px;
+.fundetail-title-one > div p span:last-child {
+  padding-right: 0px;
 }
-.fundetail-title-one>div p span{
-    font-size: 10px;
-    color: rgba(77,77,77,1);
-    display: inline-block;
-    padding-right: 40px;
+.fundetail-title-one > div p span {
+  font-size: 10px;
+  color: rgba(77, 77, 77, 1);
+  display: inline-block;
+  padding-right: 40px;
 }
-.fundetail-title-one .fundetail-title-one-right{
-    background-color: rgba(220,155,41,1);
-    border-radius: 4px;
-    font-size: 12px;
-    color: white;
-    padding: 0px 5px;
-    margin-top: 5px;
+.fundetail-title-one .fundetail-title-one-right {
+  background-color: rgba(220, 155, 41, 1);
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  padding: 0px 5px;
+  margin-top: 5px;
 }
-.fundetail-title-two{
-    font-size: 0px;
-    padding-top: 10px;
+.fundetail-title-two {
+  font-size: 0px;
+  padding-top: 10px;
 }
-.fundetail-title-two>div{
-    width: calc( 100% / 2 );
-    display: inline-block;
-    text-align: center;
+.fundetail-title-two > div {
+  width: calc(100% / 2);
+  display: inline-block;
+  text-align: center;
 }
-.fundetail-title-two>div p{
-   font-size: 13px;
-    color: rgba(102,102,102,1); 
-    line-height: 25px;
+.fundetail-title-two > div p {
+  font-size: 13px;
+  color: rgba(102, 102, 102, 1);
+  line-height: 25px;
 }
-.fundetail-title-two>div h2{
-    font-size: 24px;
-    color: red;
+.fundetail-title-two > div h2 {
+  font-size: 24px;
+  color: red;
 }
 .fundetail-content {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-.fundetail-content>div h4{
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0px 9px;
+.fundetail-content > div h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px 9px;
 }
-.fundetail-content>div ul{
-    font-size: 0px;
-    text-align: left;
+.fundetail-content > div ul {
+  font-size: 0px;
+  text-align: left;
 }
-.fundetail-content>div ul:first-child{
-    padding-top: 15px;
+.fundetail-content > div ul:first-child {
+  padding-top: 15px;
 }
-.fundetail-content>div ul li{
-    list-style: none;
-    display: inline-block;
-    font-size: 12px;
+.fundetail-content > div ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 12px;
 }
-.fundetail-content>div ul li:first-child{
-    color:rgba(51,51,51,1);
-    width: 32%;
+.fundetail-content > div ul li:first-child {
+  color: rgba(51, 51, 51, 1);
+  width: 32%;
 }
-.fundetail-content>div ul li:last-child{
-    color:rgba(77,77,77,1);
-    width: calc( 100% - 32% );
+.fundetail-content > div ul li:last-child {
+  color: rgba(77, 77, 77, 1);
+  width: calc(100% - 32%);
 }
-.fundetail-content  ul{
-    padding: 10px;
+.fundetail-content ul {
+  padding: 10px;
 }
-.fundetail-content .product-detail{
-    border-bottom: 1px solid #dbdbdb;
+.fundetail-content .product-detail {
+  border-bottom: 1px solid #dbdbdb;
 }
-.fundetail-content .product-detail .star-level{
-    color: #F3B03D;
+.fundetail-content .product-detail .star-level {
+  color: #f3b03d;
 }
-.fundetail-content .purchase-attribute{
-    padding-top: 10px;
+.fundetail-content .purchase-attribute {
+  padding-top: 10px;
 }
 </style>

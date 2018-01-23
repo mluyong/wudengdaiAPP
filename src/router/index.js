@@ -8,8 +8,6 @@ import Taber from '../components/taber.vue';
 import Home from '../page/home/index.vue'
 import News from '../page/home/news.vue'
 import Report from '../page/home/report.vue';
-import Charge from '../page/home/charge.vue';
-import Skill from '../page/home/skill.vue';
 import NewsDetail from '../page/home/newsDetail.vue';
 import Shop from '../page/home/shop.vue';
 import ShopDetail from '../page/home/shopdetail.vue';
@@ -92,14 +90,10 @@ export default new Router({
       ]
     },
 
-    {
+   
       //最新资讯
-      path: '/news', name: 'News', component: News,redirect:'/news/report', children: [
-        { path: 'report', name: 'Report', component: Report },
-        { path: 'charge', name: 'Charge', component: Charge },
-        { path: 'skill', name: 'Skill', component: Skill },
-      ]
-    },
+
+    { path: '/report', name: 'Report', component: Report },
     { path: '/shop', name: 'Shop', component: Shop },
     { path: '/shopdetail', name: 'ShopDetail', component: ShopDetail },
     { path: '/newsDetail', name: 'NewsDetail', component: NewsDetail },

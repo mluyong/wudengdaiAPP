@@ -9,7 +9,7 @@
     		</div>
     		<div class="text_input_box margin-bottom_75">
     			<img src="../../../static/img/password.jpg" />
-    			<input class="text_input_one" placeholder="请输入密码" v-model="passwords" type="text"/>
+    			<input class="text_input_one" placeholder="请输入密码" v-model="passwords" type="password"/>
     		</div>
     		<div class="margin-bottom_10">
     			<input class="submit_input" value="登录" @click.prevent="mysubmit" type="button"/>
@@ -56,7 +56,7 @@ export default {
         })
         .then(
           data => {
-            console.log(11111111111, data.body);
+            console.log(data.body);
             var check = data.body.Status;
             console.log(check);
             if (check == 0) {
@@ -66,7 +66,7 @@ export default {
             }
           },
           err => {
-            console.log(222222, err);
+            console.log(err);
           }
         );
     }

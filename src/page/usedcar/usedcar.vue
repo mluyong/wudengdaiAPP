@@ -1,14 +1,15 @@
 <template>
   <div>
-<div class="cartaber">
-      <ul> 
-        <li><router-link to="/car"><p>选车</p></router-link></li> 
-        <li><p  class="active-two">二手车</p></li>
-        <li><router-link to="/finance"><p>金融</p></router-link></li> 
-        <li><img src="../../../static/img/search.png" alt=""></li>
-      </ul> 
-       <router-view></router-view>
- </div>
+        <div class="cartaber">
+            <ul> 
+                <li><router-link to="/car"><p>选车</p></router-link></li> 
+                <li><p  class="active-two">二手车</p></li>
+                <li><router-link to="/finance"><p>金融</p></router-link></li> 
+                <li><img src="../../../static/img/search.png" alt=""></li>
+            </ul> 
+            <router-view></router-view>
+        </div>
+        <div class="cartaber-div"></div>
 
 
        <div class="car-top-img">
@@ -130,7 +131,7 @@ export default {
 
 <style scoped>
 @import "../../../static/css/common.css";
-@import url('../../../static/css/cartaber.css');
+@import url('../../../static/css/header.css');
 .car-top-img{
     width:100%;
     height: 140px;

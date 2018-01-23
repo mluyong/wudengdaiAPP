@@ -6,10 +6,10 @@
             </router-link>
         </mt-header>
         <div class="insurance-img">
-              <img src="../../../static/img/backgrounds.jpg"/>
+              <img :src="InsuranceDetails.ImgUrl"/>
         </div>
-        <div class="insurance-word">平安车险让您不再担忧</div>
-        <div class="insurance-word-two">平安车险年终大让利，6.5折起</div>
+        <div class="insurance-word">{{InsuranceDetails.Name}}</div>
+        <div class="insurance-word-two">{{InsuranceDetails.ContentIntroduce}}</div>
         <div class="require" @click="valueShow()">
             领取优惠券
         </div>
@@ -75,64 +75,83 @@
 export default {
   data() {
     return {
-      appointPop:false,
-      value:false,
+      appointPop: false,
+      value: false,
+      InsuranceDetails:[]
     };
   },
-    methods: {
-       appointShow(){
-         this.appointPop = true;
-       },
-       appointHide(){
-         this.appointPop = false;
-       },
-       valueShow(){
-         this.value = true;
-       },
-       valueHide(){
-         this.value = false;
-       }
+  methods: {
+    appointShow() {
+      this.appointPop = true;
+    },
+    appointHide() {
+      this.appointPop = false;
+    },
+    valueShow() {
+      this.value = true;
+    },
+    valueHide() {
+      this.value = false;
+    },
+    InsuranceDetailClick() {
+        var InsuranceId=this.$route.query.id
+      this.$http
+        .get(
+          "http://192.168.2.178:53960/api/AutoInsurance?id="+InsuranceId
+        )
+        .then(
+          data => {
+            this.InsuranceDetails = data.body.Data;
+            console.log(this.InsuranceDetails)
+          },
+          err => {
+            console.log(err);
+          }
+        );
+    }
   },
-}
+  created() {
+    this.InsuranceDetailClick();
+  }
+};
 </script>
 
 <style scoped>
 @import url("../../../static/css/common.css");
 @import url("../../../static/css/cardetail.css");
 
-
-
-.insurance-img{
-    width:100%;
-    height: 110px;
-    overflow: hidden;
+.insurance-img {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
 }
-.insurance-img img{
-    width:100%;
+.insurance-img img {
+  width: 100%;
+  height: 100%;
 }
-.insurance-word{
-    font-size:16px;
-    color:#333;
-    text-indent: 1em;
-    line-height: 40px;
-    background:white;
-    border-top:1px solid #e1e1e1;
+.insurance-word {
+  font-size: 16px;
+  color: #333;
+  text-indent: 1em;
+  line-height: 40px;
+  background: white;
+  border-top: 1px solid #e1e1e1;
 }
-.insurance-word-two{
-    font-size:12px;
-    color:#666;
-    text-indent: 1.4em;
-    padding-bottom:10px;
-    background:white;
+.insurance-word-two {
+  font-size: 12px;
+  color: #666;
+  text-indent: 1.4em;
+  padding-bottom: 10px;
+  background: white;
 }
-.require{
-    width:100%;
-    line-height: 40px;
-    color:#666;
-    font-size:12px;
-    text-indent: 1em;
-    border-top:1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
-    background:rgba(255,252,252,1)
+.require {
+  width: 100%;
+  line-height: 40px;
+  color: #666;
+  font-size: 12px;
+  text-indent: 1em;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 252, 252, 1);
 }
 </style>
